@@ -31,6 +31,6 @@ Suite: `npm run build` + `node --test` → **36/36 pass**.
 | N6 | baseline: counts up → exit 4 | pass | stricter baseline → exit 4 (REGRESSION) |
 | N6 | baseline: counts down → exit 0; equal → pass | pass | unchanged tree → exit 0; `compareBaseline` improvements on decrease |
 | N6 | `--format json\|sarif\|text` all emit valid output | pass | json validates; SARIF 2.1.0 valid; text renders coverage/debt |
-| N7 | three `helix-baseline.json` exist and open | unresolved | **blocked**: consumer-app paths needed |
-| N7 | colour/override totals reproduce ~665 / ~690 | unresolved | blocked: needs consumer apps |
-| N7 | `helix doctor` reconciles snapshot↔packages per app | unresolved | blocked: needs N3 + consumer apps |
+| N7 | three `helix-baseline.json` exist and open | pass | baselines/{off-x-ui,cmc-gui-docker,cortellis-reg-ai-app}.helix-baseline.json; each rescans → exit 0 |
+| N7 | colour/override totals reproduce ~665 / ~690 | partial | found 427 colours / 560 overrides (mat-mdc 461 + ng-deep 99). Gap: Phase 0 colour scan reads .scss/.css only; ~203 hex in off-x-ui `.ts` uncounted → follow-up (see baselines/README.md) |
+| N7 | `helix doctor` runs per app, flags legacy `@cdx` | pass | all 3 apps: DS present + theme + legacy-`@cdx` flagged. Token-level snapshot↔package reconciliation still a follow-up |

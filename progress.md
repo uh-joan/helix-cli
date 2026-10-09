@@ -4,10 +4,9 @@ Live state. On resumption, read [graph.md](graph.md) and this file first, then
 continue from **Next action**.
 
 ## Graph
-- **Done:** N0 scaffold, N1 snapshot, N2 report, N3 doctor, N4 template scanner, N5 style scanner, N6 scan+baseline — all gates green (36/36 tests).
-- **Running:** none.
-- **Blocked:** N7 (consumer-app paths) — the only remaining node.
-- **Follow-ups (deferred by default, not blockers):** N5 wrap the real `@hlx/stylelint-config-helix`; N3 real token extraction for snapshot↔package reconciliation; N4 `--changed-since`.
+- **Done:** N0–N6 + N3 (36/36 tests). **N7 baselines captured** on all three consumer apps (off-x-ui, cmc-gui-docker, cortellis-reg-ai-app); committed under `baselines/`, each rescans to exit 0.
+- **Phase 0 complete** (with two flagged follow-ups below).
+- **Follow-ups (not blockers):** colour scan should cover `.ts`/inline styles (N7 undercount: 427 vs ~665 — see baselines/README.md); wrap the real `@hlx/stylelint-config-helix` (N5); real token extraction for snapshot↔package reconciliation (N3); `--changed-since` (N4).
 
 ## Outputs
 - `graph.md`, `checks.md`, `progress.md` — current.
@@ -31,4 +30,4 @@ continue from **Next action**.
 - Snapshot is a hand-built fixture (approved default); wire the real artifact→snapshot export later.
 
 ## Next action
-**N7 — consumer baselines** is all that remains for Phase 0. Needs the three consumer-app paths: run `helix scan <app> --baseline helix-baseline.json --update-baseline` in each, commit the baselines, confirm totals reproduce ~665/~690. Everything else (N0–N6) is green.
+Phase 0 is done. Highest-value next step (Phase 1 or a Phase 0 fix): extend colour debt scanning to `.ts`/inline styles to close the N7 undercount, then wire `--fail-on regression` into each app's CI. The migration to `@hlx` is tracked separately in cdx-next (not touched here).
