@@ -1,0 +1,19 @@
+.x {
+  color: #1a73e8;
+  background: var(--hlx-surface-minimal);
+  border: 1px solid var(--hlx-color-purple-600);
+  box-shadow: 0 0 0 1px #fff !important;
+}
+.mat-mdc-button {
+  color: red;
+}
+::ng-deep .foo {
+  margin: 0 !important;
+}
+.y {
+  color: var(--hlx-text-primary, #2a2b2d);
+}
+// stylelint-disable-next-line color-no-hex
+.z {
+  color: #000;
+}

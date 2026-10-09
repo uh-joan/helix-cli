@@ -1,0 +1,8 @@
+{
+  "name": "healthy-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "@hlx/theme-angular-material": "22.0.0",
+    "@hlx/ngx-branding": "22.0.0"
+  }
+}
