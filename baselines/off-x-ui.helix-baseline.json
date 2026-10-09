@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
   "files": {
+    "src/app/components/area-section/area-section.component.html": 1,
     "src/app/components/header/header.component.html": 1,
+    "src/assets/fonts/offx-icons/offx-icons-family.html": 5,
     "src/app/components/additional-references-filters/additional-references-filters.component.scss": 3,
     "src/app/components/alerts-modal/alerts-modal.component.scss": 10,
     "src/app/components/alerts-modal-ct-consensus/alerts-modal-ct-consensus.component.scss": 10,
@@ -169,6 +171,28 @@
     "src/app/styles/offx/offx-tabs.scss": 2,
     "src/app/styles/offx/variables.scss": 30,
     "src/assets/fonts/offx-icons/offx-icons-family.css": 2,
-    "src/assets/pages/marketing/css/style.css": 2
+    "src/assets/pages/marketing/css/style.css": 2,
+    "src/app/components/chat-bot-sidenav/chat-bot-sidenav-conversation/chat-bot-sidenav-conversation.component.ts": 3,
+    "src/app/components/marvin-js/marvin-js-editor.component.spec.ts": 2,
+    "src/app/components/treemap/treemap.component.spec.ts": 2,
+    "src/app/components/treemap/treemap.component.ts": 9,
+    "src/app/components/treemap-snapshot/treemap-snapshot.component.spec.ts": 2,
+    "src/app/components/treemap-snapshot/treemap-snapshot.component.ts": 9,
+    "src/app/components/treemap-snapshot-mini/treemap-snapshot-mini.component.ts": 1,
+    "src/app/components/treemap-structure/treemap-structure.component.spec.ts": 1,
+    "src/app/components/treemap-structure/treemap-structure.component.ts": 7,
+    "src/app/conf/pathway-map.conf.ts": 34,
+    "src/app/model/rwe.model.ts": 40,
+    "src/app/pages/private/analytics/mounting-evidence/mounting-evidence-data/mounting-evidence-data.component.ts": 15,
+    "src/app/pages/private/analytics/search-structure-modal/search-structure-modal.component.ts": 1,
+    "src/app/pages/private/analytics/structure-toxicity-explorer/structure-toxicity-explorer-heatmap-view/structure-toxicity-explorer-heatmap-view.service.ts": 5,
+    "src/app/pages/private/chat-bot/conversation-display/conversation-display.component.ts": 19,
+    "src/app/pages/private/combinations/combinations-heat-map/combinations-heat-map.service.ts": 5,
+    "src/app/pages/private/drugs/drugs-heat-map/drugs-heat-map.service.ts": 7,
+    "src/app/pages/private/modalities/modalities-heat-map/modalities-heat-map.service.ts": 6,
+    "src/app/pages/private/pathway-maps/pathway-map/pathway-map.component.ts": 2,
+    "src/app/pages/private/safety-assistant/safety-assistant-conversation-display/safety-assistant-conversation-display.component.ts": 19,
+    "src/app/pages/private/targets/targets-heat-map/targets-heat-map.service.ts": 6,
+    "src/app/services/utils/utils-pathway-map.ts": 8
   }
 }

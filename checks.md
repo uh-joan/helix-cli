@@ -4,7 +4,7 @@ One row per node requirement. Verdict ∈ {pass, fail, unresolved}. Evidence is 
 file path or actual check output — deterministic check first. A `fail` opens the
 correction edge (graph.md); do not weaken a gate to reach `pass`.
 
-Suite: `npm run build` + `node --test` → **36/36 pass**.
+Suite: `npm run build` + `node --test` → **39/39 pass**.
 
 | node | requirement | verdict | evidence |
 |---|---|---|---|
@@ -32,5 +32,5 @@ Suite: `npm run build` + `node --test` → **36/36 pass**.
 | N6 | baseline: counts down → exit 0; equal → pass | pass | unchanged tree → exit 0; `compareBaseline` improvements on decrease |
 | N6 | `--format json\|sarif\|text` all emit valid output | pass | json validates; SARIF 2.1.0 valid; text renders coverage/debt |
 | N7 | three `helix-baseline.json` exist and open | pass | baselines/{off-x-ui,cmc-gui-docker,cortellis-reg-ai-app}.helix-baseline.json; each rescans → exit 0 |
-| N7 | colour/override totals reproduce ~665 / ~690 | partial | found 427 colours / 560 overrides (mat-mdc 461 + ng-deep 99). Gap: Phase 0 colour scan reads .scss/.css only; ~203 hex in off-x-ui `.ts` uncounted → follow-up (see baselines/README.md) |
+| N7 | colour/override totals reproduce ~665 / ~690 | pass (colour) / partial (overrides) | colour **655 ≈ 665** after adding .ts/.html hex; overrides 560 (mat-mdc 461 + ng-deep 99) vs ~690 — remaining follow-up (`.mdc-*`/`.cdk-*`), not needed for the ratchet |
 | N7 | `helix doctor` runs per app, flags legacy `@cdx` | pass | all 3 apps: DS present + theme + legacy-`@cdx` flagged. Token-level snapshot↔package reconciliation still a follow-up |

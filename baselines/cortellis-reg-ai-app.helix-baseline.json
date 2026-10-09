@@ -1,6 +1,10 @@
 {
   "schemaVersion": 1,
   "files": {
+    "src/app/core/layout/chat-history/chat-history.html": 5,
+    "src/app/core/layout/workspace/table-viewer/table-viewer.html": 1,
+    "src/app/features/chat/pages/chat-conversation/assistant-card/source-documents/compare-versions-modal/compare-versions-modal.html": 6,
+    "src/app/features/chat/pages/chat-conversation/conversation-header/conversation-header.html": 1,
     "src/app/app.scss": 1,
     "src/app/core/layout/chat-history/chat-history.scss": 4,
     "src/app/core/layout/chat-history/question-tooltip/question-tooltip.scss": 2,
@@ -38,6 +42,7 @@
     "src/app/features/chat/pages/chat-conversation/streaming-card/streaming-card.scss": 5,
     "src/app/features/chat/pages/chat-intro/chat-intro.scss": 7,
     "src/app/features/chat/pages/chat-intro/hint-card/hint-card.scss": 1,
-    "src/styles.scss": 19
+    "src/styles.scss": 19,
+    "src/app/core/notification/notification.ts": 2
   }
 }

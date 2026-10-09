@@ -13,28 +13,29 @@ helix scan <app> --baseline baselines/<app>.helix-baseline.json --update-baselin
 
 ## Snapshot at capture
 
+Colour now covers `.scss`/`.css`, `.ts` (hex inside string literals only — ES
+private fields and comments are excluded) and `.html` markup.
+
 | app | coverage | colour | mat-mdc | ::ng-deep | !important | legacy sel. | `@cdx` pkgs |
 |---|---|---|---|---|---|---|---|
-| off-x-ui | 45% | 165 | 414 | 0 | 164 | 1 | 7 |
-| cmc-gui-docker | 67% | 53 | 29 | 68 | 18 | 0 | 4 |
-| cortellis-reg-ai-app | 53% | 209 | 18 | 31 | 59 | 0 | 4 |
-| **total** | — | **427** | **461** | **99** | **241** | **1** | — |
+| off-x-ui | 45% | 374 | 414 | 0 | 164 | 1 | 7 |
+| cmc-gui-docker | 67% | 57 | 29 | 68 | 18 | 0 | 4 |
+| cortellis-reg-ai-app | 53% | 224 | 18 | 31 | 59 | 0 | 4 |
+| **total** | — | **655** | **461** | **99** | **241** | **1** | — |
 
 `doctor` on all three: design system present, theme class present, **legacy
 `@cdx` flagged** (every app is on `@cdx`, so all are migration targets).
 
-## Known undercount vs the research estimate
+## Vs the research estimate
 
 The research estimated ~665 hard-coded colours and ~690 Material overrides
-(`.mat-mdc-*` + `::ng-deep`). Captured here: **427 colours**, **560 overrides**
-(461 + 99). The main reason is a Phase 0 scanner limitation, not a discrepancy in
-the apps:
+(`.mat-mdc-*` + `::ng-deep`).
 
-- The colour scanner reads **`.scss`/`.css` only**. A large share of hard-coded
-  colour lives in **`.ts`** (chart/config/logic and inline styles) — e.g.
-  **~203 hex in off-x-ui `.ts`** alone — which is not yet counted.
+- **Colour: 655 ≈ 665 — reproduced.** The earlier 427 undercount was hex in
+  `.ts` (e.g. ~209 in off-x-ui `.ts`/`.html`), now counted.
+- **Overrides: 560** (`.mat-mdc-*` 461 + `::ng-deep` 99) vs ~690 — still short.
+  Likely the research also counted related patterns (`.mdc-*`, `.cdk-*`, or
+  attribute-level overrides). Remaining follow-up; not required for the ratchet.
 
-Follow-up: extend colour debt scanning to `.ts` and inline component styles;
-that should close most of the gap. The **baseline ratchet works regardless** of
-absolute accuracy — its job is to stop any count going up, and each app rescans
-to exit 0 against its baseline today.
+The **baseline ratchet works regardless** of absolute accuracy — its job is to
+stop any count going up, and each app rescans to exit 0 against its baseline.

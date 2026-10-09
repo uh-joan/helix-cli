@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "files": {
+    "src/app/pages/assistant/assistant-home/assistant-home.html": 4,
     "src/app/app.scss": 9,
     "src/app/components/ag-grid/alerts-activate-renderer/alerts-activate-renderer.scss": 1,
     "src/app/components/ag-grid/html-and-popup-renderer/html-and-popup-renderer.scss": 1,

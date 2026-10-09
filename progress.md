@@ -5,8 +5,8 @@ continue from **Next action**.
 
 ## Graph
 - **Done:** N0–N6 + N3 (36/36 tests). **N7 baselines captured** on all three consumer apps (off-x-ui, cmc-gui-docker, cortellis-reg-ai-app); committed under `baselines/`, each rescans to exit 0.
-- **Phase 0 complete** (with two flagged follow-ups below).
-- **Follow-ups (not blockers):** colour scan should cover `.ts`/inline styles (N7 undercount: 427 vs ~665 — see baselines/README.md); wrap the real `@hlx/stylelint-config-helix` (N5); real token extraction for snapshot↔package reconciliation (N3); `--changed-since` (N4).
+- **Phase 0 complete.** Colour scan now covers `.ts` (string-scoped) + `.html`: consumer totals **colour 655 ≈ research ~665** (was 427). 39/39 tests.
+- **Follow-ups (not blockers):** override count 560 vs ~690 (add `.mdc-*`/`.cdk-*`/attribute overrides); wrap the real `@hlx/stylelint-config-helix` (N5); real token extraction for snapshot↔package reconciliation (N3); `--changed-since` (N4).
 
 ## Outputs
 - `graph.md`, `checks.md`, `progress.md` — current.
