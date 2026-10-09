@@ -1,0 +1,8 @@
+{
+  "name": "legacy-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cdx/theme-angular-material": "18.3.0",
+    "@cdx/ngx-branding": "18.3.0"
+  }
+}

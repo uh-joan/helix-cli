@@ -1,0 +1,1910 @@
+{
+  "schemaVersion": "1.0",
+  "source": {
+    "artifact": "helix-angular",
+    "generatedFrom": "fixtures/artifact/tokens.json",
+    "note": "Phase 0 fixture snapshot; real artifact->snapshot export replaces this later."
+  },
+  "classification": {
+    "compliantPrefixes": [
+      "hlx-"
+    ],
+    "themedPrefixes": [
+      "mat-"
+    ],
+    "legacyPrefixes": [
+      "cdx-"
+    ],
+    "rawEquivalents": [
+      "button",
+      "input",
+      "select",
+      "textarea",
+      "table",
+      "a"
+    ]
+  },
+  "tokens": {
+    "color": [
+      {
+        "name": "color-purple-100",
+        "value": "#faf5ff",
+        "cssVar": "--hlx-color-purple-100",
+        "exposed": false,
+        "usage": "Accent tint. Hover layer for accent outlined/basic buttons (components-accent-outlined_basic-hover)."
+      },
+      {
+        "name": "color-purple-400",
+        "value": "#b175e1",
+        "cssVar": "--hlx-color-purple-400",
+        "exposed": false,
+        "usage": "Brand purple. Brand icons only (icon-brand); 3:1+ on white, not for text."
+      },
+      {
+        "name": "color-purple-600",
+        "value": "#5e33bf",
+        "cssVar": "--hlx-color-purple-600",
+        "exposed": false,
+        "usage": "Accent purple. Accent filled buttons, FABs, chips and accent icons; text-invert on it."
+      },
+      {
+        "name": "color-neutral-0",
+        "value": "#ffffff",
+        "cssVar": "--hlx-color-neutral-0",
+        "exposed": false,
+        "usage": "White. Primary surface; inverse text, icons and borders on surface-invert."
+      },
+      {
+        "name": "color-neutral-50",
+        "value": "#f9f9f9",
+        "cssVar": "--hlx-color-neutral-50",
+        "exposed": false,
+        "usage": "Lightest grey. Very quiet surfaces (surface-minimal-light)."
+      },
+      {
+        "name": "color-neutral-100",
+        "value": "#f2f2f2",
+        "cssVar": "--hlx-color-neutral-100",
+        "exposed": false,
+        "usage": "Off-white. Minimal surfaces (table headers, toggle containers, filled inputs)."
+      },
+      {
+        "name": "color-neutral-200",
+        "value": "#dfe1e2",
+        "cssVar": "--hlx-color-neutral-200",
+        "exposed": false,
+        "usage": "Light grey. Contrast surfaces, secondary borders, dividers, disabled fills."
+      },
+      {
+        "name": "color-neutral-400",
+        "value": "#babcbe",
+        "cssVar": "--hlx-color-neutral-400",
+        "exposed": false,
+        "usage": "Mid grey. Primary borders, outlines, disabled text and icons."
+      },
+      {
+        "name": "color-neutral-600",
+        "value": "#5f6368",
+        "cssVar": "--hlx-color-neutral-600",
+        "exposed": false,
+        "usage": "Dark grey. Secondary text and icons; footer text; tooltip container."
+      },
+      {
+        "name": "color-neutral-800",
+        "value": "#2a2b2d",
+        "cssVar": "--hlx-color-neutral-800",
+        "exposed": false,
+        "usage": "Ink. Primary text and icons; primary filled buttons; header bar (surface-invert)."
+      },
+      {
+        "name": "color-neutral-1000",
+        "value": "#000000",
+        "cssVar": "--hlx-color-neutral-1000",
+        "exposed": false,
+        "usage": "Black. Primary button hover background."
+      },
+      {
+        "name": "color-red-100",
+        "value": "#fadcdc",
+        "cssVar": "--hlx-color-red-100",
+        "exposed": false,
+        "usage": "Negative tint. Negative surfaces and light negative fills."
+      },
+      {
+        "name": "color-red-500",
+        "value": "#c43136",
+        "cssVar": "--hlx-color-red-500",
+        "exposed": false,
+        "usage": "Negative. Error text, negative buttons, input error borders."
+      },
+      {
+        "name": "color-red-900",
+        "value": "#410b0d",
+        "cssVar": "--hlx-color-red-900",
+        "exposed": false,
+        "usage": "Negative ink. Text and icons on red-100."
+      },
+      {
+        "name": "color-yellow-100",
+        "value": "#ffefd1",
+        "cssVar": "--hlx-color-yellow-100",
+        "exposed": false,
+        "usage": "Warn tint. Warn surfaces and chips."
+      },
+      {
+        "name": "color-yellow-500",
+        "value": "#ef9f00",
+        "cssVar": "--hlx-color-yellow-500",
+        "exposed": false,
+        "usage": "Warn. Defined in primitives; no semantic token maps to it."
+      },
+      {
+        "name": "color-yellow-900",
+        "value": "#402b00",
+        "cssVar": "--hlx-color-yellow-900",
+        "exposed": false,
+        "usage": "Warn ink. Warn text and icons on yellow-100."
+      },
+      {
+        "name": "color-green-100",
+        "value": "#d2f7d6",
+        "cssVar": "--hlx-color-green-100",
+        "exposed": false,
+        "usage": "Positive tint. Positive surfaces and chips."
+      },
+      {
+        "name": "color-green-500",
+        "value": "#04800f",
+        "cssVar": "--hlx-color-green-500",
+        "exposed": false,
+        "usage": "Positive. Defined in primitives; no semantic token maps to it."
+      },
+      {
+        "name": "color-green-900",
+        "value": "#003600",
+        "cssVar": "--hlx-color-green-900",
+        "exposed": false,
+        "usage": "Positive ink. Positive text and icons on green-100."
+      },
+      {
+        "name": "color-blue-100",
+        "value": "#d7e8f7",
+        "cssVar": "--hlx-color-blue-100",
+        "exposed": false,
+        "usage": "Info tint. Info surfaces and chips."
+      },
+      {
+        "name": "color-blue-500",
+        "value": "#0c6ac1",
+        "cssVar": "--hlx-color-blue-500",
+        "exposed": false,
+        "usage": "Info. Defined in primitives; no semantic token maps to it."
+      },
+      {
+        "name": "color-blue-900",
+        "value": "#031c40",
+        "cssVar": "--hlx-color-blue-900",
+        "exposed": false,
+        "usage": "Info ink. Info text and icons on blue-100."
+      },
+      {
+        "name": "surface-primary",
+        "value": "#ffffff",
+        "rawValue": "{color-neutral-0}",
+        "cssVar": "--hlx-surface-primary",
+        "exposed": true,
+        "usage": "Default page and container background (cards, menus, dialogs, tooltips)."
+      },
+      {
+        "name": "surface-minimal",
+        "value": "#f2f2f2",
+        "rawValue": "{color-neutral-100}",
+        "cssVar": "--hlx-surface-minimal",
+        "exposed": true,
+        "usage": "Quiet background: table headers, button-toggle container, filled inputs."
+      },
+      {
+        "name": "surface-minimal-light",
+        "value": "#f9f9f9",
+        "rawValue": "{color-neutral-50}",
+        "cssVar": "--hlx-surface-minimal-light",
+        "exposed": true,
+        "usage": "Quieter than surface-minimal: subtle zebra rows and wells."
+      },
+      {
+        "name": "surface-contrast",
+        "value": "#dfe1e2",
+        "rawValue": "{color-neutral-200}",
+        "cssVar": "--hlx-surface-contrast",
+        "exposed": true,
+        "usage": "Stronger grey ground; dividers and progress-bar tracks."
+      },
+      {
+        "name": "surface-invert",
+        "value": "#2a2b2d",
+        "rawValue": "{color-neutral-800}",
+        "cssVar": "--hlx-surface-invert",
+        "exposed": true,
+        "usage": "Dark ground: the global header bar and inverted tabs. Pair with text-invert."
+      },
+      {
+        "name": "surface-info",
+        "value": "#d7e8f7",
+        "rawValue": "{color-blue-100}",
+        "cssVar": "--hlx-surface-info",
+        "exposed": true,
+        "usage": "Info notification/chip background. Pair with text-info."
+      },
+      {
+        "name": "surface-positive",
+        "value": "#d2f7d6",
+        "rawValue": "{color-green-100}",
+        "cssVar": "--hlx-surface-positive",
+        "exposed": true,
+        "usage": "Positive notification/chip background. Pair with text-positive."
+      },
+      {
+        "name": "surface-negative",
+        "value": "#fadcdc",
+        "rawValue": "{color-red-100}",
+        "cssVar": "--hlx-surface-negative",
+        "exposed": true,
+        "usage": "Negative (warn-severity) notification background. Pair with color-red-900 (12.8:1); text-negative on it is 4.25:1, so keep red action labels at label weight or larger."
+      },
+      {
+        "name": "surface-warn",
+        "value": "#ffefd1",
+        "rawValue": "{color-yellow-100}",
+        "cssVar": "--hlx-surface-warn",
+        "exposed": true,
+        "usage": "Warn chip background. Pair with text-warn."
+      },
+      {
+        "name": "text-primary",
+        "value": "#2a2b2d",
+        "rawValue": "{color-neutral-800}",
+        "cssVar": "--hlx-text-primary",
+        "exposed": true,
+        "usage": "Body copy and headings on surface-primary, surface-minimal and surface-contrast."
+      },
+      {
+        "name": "text-secondary",
+        "value": "#5f6368",
+        "rawValue": "{color-neutral-600}",
+        "cssVar": "--hlx-text-secondary",
+        "exposed": true,
+        "usage": "Supporting copy and footer text on surface-primary and surface-minimal."
+      },
+      {
+        "name": "text-invert",
+        "value": "#ffffff",
+        "rawValue": "{color-neutral-0}",
+        "cssVar": "--hlx-text-invert",
+        "exposed": true,
+        "usage": "Text on surface-invert, primary/accent filled buttons and chips."
+      },
+      {
+        "name": "border-primary",
+        "value": "#babcbe",
+        "rawValue": "{color-neutral-400}",
+        "cssVar": "--hlx-border-primary",
+        "exposed": true,
+        "usage": "Default control outlines and inline-notification rule. ~1.9:1 on white: below the 3:1 non-text floor in the source."
+      },
+      {
+        "name": "border-secondary",
+        "value": "#dfe1e2",
+        "rawValue": "{color-neutral-200}",
+        "cssVar": "--hlx-border-secondary",
+        "exposed": true,
+        "usage": "Hairlines: table row separators, footer top rule."
+      },
+      {
+        "name": "border-contrast",
+        "value": "#5f6368",
+        "rawValue": "{color-neutral-600}",
+        "cssVar": "--hlx-border-contrast",
+        "exposed": true,
+        "usage": "Strong borders where a control must read clearly."
+      },
+      {
+        "name": "border-invert",
+        "value": "#ffffff",
+        "rawValue": "{color-neutral-0}",
+        "cssVar": "--hlx-border-invert",
+        "exposed": true,
+        "usage": "Borders on surface-invert."
+      },
+      {
+        "name": "icon-primary",
+        "value": "#2a2b2d",
+        "rawValue": "{color-neutral-800}",
+        "cssVar": "--hlx-icon-primary",
+        "exposed": true,
+        "usage": "Default icons on light surfaces."
+      },
+      {
+        "name": "icon-secondary",
+        "value": "#5f6368",
+        "rawValue": "{color-neutral-600}",
+        "cssVar": "--hlx-icon-secondary",
+        "exposed": true,
+        "usage": "Secondary icons on light surfaces."
+      },
+      {
+        "name": "icon-invert",
+        "value": "#ffffff",
+        "rawValue": "{color-neutral-0}",
+        "cssVar": "--hlx-icon-invert",
+        "exposed": true,
+        "usage": "Icons on surface-invert and filled buttons."
+      },
+      {
+        "name": "icon-info",
+        "value": "#031c40",
+        "rawValue": "{color-blue-900}",
+        "cssVar": "--hlx-icon-info",
+        "exposed": true,
+        "usage": "Info icons on surface-info."
+      },
+      {
+        "name": "icon-positive",
+        "value": "#003600",
+        "rawValue": "{color-green-900}",
+        "cssVar": "--hlx-icon-positive",
+        "exposed": true,
+        "usage": "Positive icons on surface-positive."
+      },
+      {
+        "name": "icon-negative",
+        "value": "#410b0d",
+        "rawValue": "{color-red-900}",
+        "cssVar": "--hlx-icon-negative",
+        "exposed": true,
+        "usage": "Negative icons. Now red-900 (was red-500 at the last commit)."
+      },
+      {
+        "name": "icon-warn",
+        "value": "#402b00",
+        "rawValue": "{color-yellow-900}",
+        "cssVar": "--hlx-icon-warn",
+        "exposed": true,
+        "usage": "Warn icons on surface-warn."
+      },
+      {
+        "name": "icon-accent",
+        "value": "#5e33bf",
+        "rawValue": "{color-purple-600}",
+        "cssVar": "--hlx-icon-accent",
+        "exposed": true,
+        "usage": "Accent icons on surface-primary."
+      },
+      {
+        "name": "icon-brand",
+        "value": "#b175e1",
+        "rawValue": "{color-purple-400}",
+        "cssVar": "--hlx-icon-brand",
+        "exposed": true,
+        "usage": "Brand-moment icons only."
+      },
+      {
+        "name": "icon-disabled",
+        "value": "#babcbe",
+        "rawValue": "{color-neutral-400}",
+        "cssVar": "--hlx-icon-disabled",
+        "exposed": true,
+        "usage": "Disabled icons."
+      },
+      {
+        "name": "components-primary-filled",
+        "value": "#2a2b2d",
+        "rawValue": "{color-neutral-800}",
+        "cssVar": "--hlx-components-primary-filled",
+        "exposed": false,
+        "usage": "Component state: primary filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-secondary-filled",
+        "value": "#dfe1e2",
+        "rawValue": "{color-neutral-200}",
+        "cssVar": "--hlx-components-secondary-filled",
+        "exposed": false,
+        "usage": "Component state: secondary filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-secondary-filled-hover",
+        "value": "rgb(0 0 0 / 8%)",
+        "cssVar": "--hlx-components-secondary-filled-hover",
+        "exposed": false,
+        "usage": "Component state: secondary filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-primary-filled-hover",
+        "value": "rgb(0 0 0 / 100%)",
+        "cssVar": "--hlx-components-primary-filled-hover",
+        "exposed": false,
+        "usage": "Component state: primary filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-primary-outline",
+        "value": "#babcbe",
+        "rawValue": "{color-neutral-400}",
+        "cssVar": "--hlx-components-primary-outline",
+        "exposed": false,
+        "usage": "Component state: primary outline. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-primary-outlined_basic-hover",
+        "value": "rgb(0 0 0 / 4%)",
+        "cssVar": "--hlx-components-primary-outlined_basic-hover",
+        "exposed": false,
+        "usage": "Component state: primary outlined / basic hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-accent-filled",
+        "value": "#5e33bf",
+        "rawValue": "{color-purple-600}",
+        "cssVar": "--hlx-components-accent-filled",
+        "exposed": false,
+        "usage": "Component state: accent filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-accent-filled-hover",
+        "value": "rgb(0 0 0 / 16%)",
+        "cssVar": "--hlx-components-accent-filled-hover",
+        "exposed": false,
+        "usage": "Component state: accent filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-accent-outline",
+        "value": "#5e33bf",
+        "rawValue": "{color-purple-600}",
+        "cssVar": "--hlx-components-accent-outline",
+        "exposed": false,
+        "usage": "Component state: accent outline. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-accent-outlined_basic-hover",
+        "value": "#faf5ff",
+        "rawValue": "{color-purple-100}",
+        "cssVar": "--hlx-components-accent-outlined_basic-hover",
+        "exposed": false,
+        "usage": "Component state: accent outlined / basic hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-negative-filled",
+        "value": "#c43136",
+        "rawValue": "{color-red-500}",
+        "cssVar": "--hlx-components-negative-filled",
+        "exposed": false,
+        "usage": "Component state: negative filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-negative-filled-light",
+        "value": "#fadcdc",
+        "rawValue": "{color-red-100}",
+        "cssVar": "--hlx-components-negative-filled-light",
+        "exposed": false,
+        "usage": "Component state: negative filled light. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-negative-filled-hover",
+        "value": "rgb(0 0 0 / 4%)",
+        "cssVar": "--hlx-components-negative-filled-hover",
+        "exposed": false,
+        "usage": "Component state: negative filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-negative-outline",
+        "value": "#c43136",
+        "rawValue": "{color-red-500}",
+        "cssVar": "--hlx-components-negative-outline",
+        "exposed": false,
+        "usage": "Component state: negative outline. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-negative-outlined_basic-hover",
+        "value": "#fadcdc",
+        "rawValue": "{color-red-100}",
+        "cssVar": "--hlx-components-negative-outlined_basic-hover",
+        "exposed": false,
+        "usage": "Component state: negative outlined / basic hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-disabled",
+        "value": "#dfe1e2",
+        "rawValue": "{color-neutral-200}",
+        "cssVar": "--hlx-components-disabled",
+        "exposed": false,
+        "usage": "Component state: disabled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-disabled-outline",
+        "value": "#babcbe",
+        "rawValue": "{color-neutral-400}",
+        "cssVar": "--hlx-components-disabled-outline",
+        "exposed": false,
+        "usage": "Component state: disabled outline. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-warn-filled",
+        "value": "#ffefd1",
+        "rawValue": "{color-yellow-100}",
+        "cssVar": "--hlx-components-warn-filled",
+        "exposed": false,
+        "usage": "Component state: warn filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-ripple-pressed_focused",
+        "value": "rgb(42 43 45 / 12%)",
+        "cssVar": "--hlx-components-ripple-pressed_focused",
+        "exposed": false,
+        "usage": "Component state: ripple pressed / focused. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-ripple-hover",
+        "value": "rgb(42 43 45 / 8%)",
+        "cssVar": "--hlx-components-ripple-hover",
+        "exposed": false,
+        "usage": "Component state: ripple hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-positive-filled",
+        "value": "#d2f7d6",
+        "rawValue": "{color-green-100}",
+        "cssVar": "--hlx-components-positive-filled",
+        "exposed": false,
+        "usage": "Component state: positive filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-positive-filled-hover",
+        "value": "rgb(0 0 0 / 4%)",
+        "cssVar": "--hlx-components-positive-filled-hover",
+        "exposed": false,
+        "usage": "Component state: positive filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-info-filled",
+        "value": "#d7e8f7",
+        "rawValue": "{color-blue-100}",
+        "cssVar": "--hlx-components-info-filled",
+        "exposed": false,
+        "usage": "Component state: info filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-info-filled-hover",
+        "value": "rgb(0 0 0 / 4%)",
+        "cssVar": "--hlx-components-info-filled-hover",
+        "exposed": false,
+        "usage": "Component state: info filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-invert-filled",
+        "value": "#ffffff",
+        "rawValue": "{color-neutral-0}",
+        "cssVar": "--hlx-components-invert-filled",
+        "exposed": false,
+        "usage": "Component state: invert filled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-invert-filled-hover",
+        "value": "rgb(0 0 0 / 4%)",
+        "cssVar": "--hlx-components-invert-filled-hover",
+        "exposed": false,
+        "usage": "Component state: invert filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-invert-outline",
+        "value": "#ffffff",
+        "rawValue": "{color-neutral-0}",
+        "cssVar": "--hlx-components-invert-outline",
+        "exposed": false,
+        "usage": "Component state: invert outline. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-invert-hover",
+        "value": "rgb(255 255 255 / 8%)",
+        "cssVar": "--hlx-components-invert-hover",
+        "exposed": false,
+        "usage": "Component state: invert hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-outlined-enabled",
+        "value": "#babcbe",
+        "rawValue": "{color-neutral-400}",
+        "cssVar": "--hlx-components-text-input-outlined-enabled",
+        "exposed": false,
+        "usage": "Component state: text input outlined enabled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-outlined-hover",
+        "value": "#5f6368",
+        "rawValue": "{color-neutral-600}",
+        "cssVar": "--hlx-components-text-input-outlined-hover",
+        "exposed": false,
+        "usage": "Component state: text input outlined hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-outlined-focused",
+        "value": "#2a2b2d",
+        "rawValue": "{color-neutral-800}",
+        "cssVar": "--hlx-components-text-input-outlined-focused",
+        "exposed": false,
+        "usage": "Component state: text input outlined focused. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-outlined-error",
+        "value": "#c43136",
+        "rawValue": "{color-red-500}",
+        "cssVar": "--hlx-components-text-input-outlined-error",
+        "exposed": false,
+        "usage": "Component state: text input outlined error. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-outlined-disabled",
+        "value": "#f2f2f2",
+        "rawValue": "{color-neutral-100}",
+        "cssVar": "--hlx-components-text-input-outlined-disabled",
+        "exposed": false,
+        "usage": "Component state: text input outlined disabled. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-filled-fill",
+        "value": "#f2f2f2",
+        "rawValue": "{color-neutral-100}",
+        "cssVar": "--hlx-components-text-input-filled-fill",
+        "exposed": false,
+        "usage": "Component state: text input filled fill. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-filled-enabled-border",
+        "value": "#5f6368",
+        "rawValue": "{color-neutral-600}",
+        "cssVar": "--hlx-components-text-input-filled-enabled-border",
+        "exposed": false,
+        "usage": "Component state: text input filled enabled border. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-filled-hover-fill",
+        "value": "#dfe1e2",
+        "rawValue": "{color-neutral-200}",
+        "cssVar": "--hlx-components-text-input-filled-hover-fill",
+        "exposed": false,
+        "usage": "Component state: text input filled hover fill. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-filled-hover_focused-border",
+        "value": "#2a2b2d",
+        "rawValue": "{color-neutral-800}",
+        "cssVar": "--hlx-components-text-input-filled-hover_focused-border",
+        "exposed": false,
+        "usage": "Component state: text input filled hover / focused border. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-filled-error-border",
+        "value": "#c43136",
+        "rawValue": "{color-red-500}",
+        "cssVar": "--hlx-components-text-input-filled-error-border",
+        "exposed": false,
+        "usage": "Component state: text input filled error border. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-text-input-filled-disabled-border",
+        "value": "#5f6368",
+        "rawValue": "{color-neutral-600}",
+        "cssVar": "--hlx-components-text-input-filled-disabled-border",
+        "exposed": false,
+        "usage": "Component state: text input filled disabled border. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-warn-filled-hover",
+        "value": "rgb(0 0 0 / 4%)",
+        "cssVar": "--hlx-components-warn-filled-hover",
+        "exposed": false,
+        "usage": "Component state: warn filled hover. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "components-button-hover-background",
+        "value": "#000000",
+        "rawValue": "{color-neutral-1000}",
+        "cssVar": "--hlx-components-button-hover-background",
+        "exposed": false,
+        "usage": "Component state: button hover background. Used by the Material overrides in overrides.scss."
+      },
+      {
+        "name": "text-negative",
+        "value": "#c43136",
+        "rawValue": "{color-red-500}",
+        "cssVar": "--hlx-text-negative",
+        "exposed": true,
+        "usage": "Error messages and negative actions on surface-primary."
+      },
+      {
+        "name": "text-warn",
+        "value": "#402b00",
+        "rawValue": "{color-yellow-900}",
+        "cssVar": "--hlx-text-warn",
+        "exposed": true,
+        "usage": "Warn copy on surface-warn."
+      },
+      {
+        "name": "text-positive",
+        "value": "#003600",
+        "rawValue": "{color-green-900}",
+        "cssVar": "--hlx-text-positive",
+        "exposed": true,
+        "usage": "Positive copy on surface-positive."
+      },
+      {
+        "name": "text-info",
+        "value": "#031c40",
+        "rawValue": "{color-blue-900}",
+        "cssVar": "--hlx-text-info",
+        "exposed": true,
+        "usage": "Info copy on surface-info."
+      },
+      {
+        "name": "text-disabled",
+        "value": "#babcbe",
+        "rawValue": "{color-neutral-400}",
+        "cssVar": "--hlx-text-disabled",
+        "exposed": true,
+        "usage": "Disabled labels only. Below 4.5:1 on white by design (WCAG exempts disabled controls)."
+      },
+      {
+        "name": "color-green-600",
+        "value": "#018760",
+        "cssVar": "--hlx-color-green-600",
+        "exposed": false,
+        "usage": "Positive accent. Border of positive notifications (not yet a Figma variable; a primitive in source)."
+      },
+      {
+        "name": "color-blue-400",
+        "value": "#3595f0",
+        "cssVar": "--hlx-color-blue-400",
+        "exposed": false,
+        "usage": "Lighter blue. AI-gradient start colour and the AI button fill fallback."
+      },
+      {
+        "name": "color-blue-700",
+        "value": "#1565c0",
+        "cssVar": "--hlx-color-blue-700",
+        "exposed": false,
+        "usage": "Blue 700 primitive. Available for blue scales; no semantic token maps to it yet."
+      },
+      {
+        "name": "color-indigo-900",
+        "value": "#282c75",
+        "cssVar": "--hlx-color-indigo-900",
+        "exposed": false,
+        "usage": "Deep indigo. Visited-link colour (text-link-visited)."
+      },
+      {
+        "name": "text-link",
+        "value": "#0c6ac1",
+        "rawValue": "{color-blue-500}",
+        "cssVar": "--hlx-text-link",
+        "exposed": true,
+        "usage": "Hyperlinks (.hlx-link-blue), weight 600. 4.9:1 on surface-primary."
+      },
+      {
+        "name": "text-link-visited",
+        "value": "#282c75",
+        "rawValue": "{color-indigo-900}",
+        "cssVar": "--hlx-text-link-visited",
+        "exposed": true,
+        "usage": "Visited hyperlinks (.hlx-link-visited / :visited)."
+      },
+      {
+        "name": "gradient-ai-start",
+        "value": "#3595f0",
+        "rawValue": "{color-blue-400}",
+        "cssVar": "--hlx-gradient-ai-start",
+        "exposed": true,
+        "usage": "AI gradient start (top-left) and the solid fallback for the AI button fill."
+      },
+      {
+        "name": "gradient-ai-end",
+        "value": "#b175e1",
+        "rawValue": "{color-purple-400}",
+        "cssVar": "--hlx-gradient-ai-end",
+        "exposed": true,
+        "usage": "AI gradient end (bottom-right). The gradient itself is 150deg; see the AI gradient note in the brand book."
+      },
+      {
+        "name": "components-ai-filled-hover",
+        "value": "#000000",
+        "cssVar": "--hlx-components-ai-filled-hover",
+        "exposed": false,
+        "usage": "AI button hover/focus state layer (black at 16%, 24% pressed). Opacity applied by the component."
+      },
+      {
+        "name": "ref-primary-0",
+        "value": "#0f1011",
+        "cssVar": "--hlx-ref-primary-0",
+        "exposed": false,
+        "usage": "M3 reference tone 0. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-10",
+        "value": "#191a1c",
+        "cssVar": "--hlx-ref-primary-10",
+        "exposed": false,
+        "usage": "M3 reference tone 10. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-20",
+        "value": "#1f2022",
+        "cssVar": "--hlx-ref-primary-20",
+        "exposed": false,
+        "usage": "M3 reference tone 20. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-25",
+        "value": "#1f2022",
+        "cssVar": "--hlx-ref-primary-25",
+        "exposed": false,
+        "usage": "M3 reference tone 25. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-30",
+        "value": "#252628",
+        "cssVar": "--hlx-ref-primary-30",
+        "exposed": false,
+        "usage": "M3 reference tone 30. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-35",
+        "value": "#252628",
+        "cssVar": "--hlx-ref-primary-35",
+        "exposed": false,
+        "usage": "M3 reference tone 35. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-40",
+        "value": "#2a2b2d",
+        "cssVar": "--hlx-ref-primary-40",
+        "exposed": false,
+        "usage": "M3 reference tone 40. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-50",
+        "value": "#4a4b4d",
+        "cssVar": "--hlx-ref-primary-50",
+        "exposed": false,
+        "usage": "M3 reference tone 50. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-60",
+        "value": "#6a6b6c",
+        "cssVar": "--hlx-ref-primary-60",
+        "exposed": false,
+        "usage": "M3 reference tone 60. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-70",
+        "value": "#959596",
+        "cssVar": "--hlx-ref-primary-70",
+        "exposed": false,
+        "usage": "M3 reference tone 70. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-80",
+        "value": "#bfbfc0",
+        "cssVar": "--hlx-ref-primary-80",
+        "exposed": false,
+        "usage": "M3 reference tone 80. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-90",
+        "value": "#e5e6e6",
+        "cssVar": "--hlx-ref-primary-90",
+        "exposed": false,
+        "usage": "M3 reference tone 90. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-95",
+        "value": "#f2f2f2",
+        "cssVar": "--hlx-ref-primary-95",
+        "exposed": false,
+        "usage": "M3 reference tone 95. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-98",
+        "value": "#f8f8f8",
+        "cssVar": "--hlx-ref-primary-98",
+        "exposed": false,
+        "usage": "M3 reference tone 98. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-99",
+        "value": "#fcfcfc",
+        "cssVar": "--hlx-ref-primary-99",
+        "exposed": false,
+        "usage": "M3 reference tone 99. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-primary-100",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-primary-100",
+        "exposed": false,
+        "usage": "M3 reference tone 100. Drives the Material primary role (ink). Key tones: 40 = header/surface-invert, 100 = white. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-0",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-secondary-0",
+        "exposed": false,
+        "usage": "M3 reference tone 0. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-10",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-secondary-10",
+        "exposed": false,
+        "usage": "M3 reference tone 10. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-20",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-secondary-20",
+        "exposed": false,
+        "usage": "M3 reference tone 20. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-25",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-secondary-25",
+        "exposed": false,
+        "usage": "M3 reference tone 25. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-30",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-secondary-30",
+        "exposed": false,
+        "usage": "M3 reference tone 30. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-35",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-secondary-35",
+        "exposed": false,
+        "usage": "M3 reference tone 35. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-40",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-secondary-40",
+        "exposed": false,
+        "usage": "M3 reference tone 40. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-50",
+        "value": "#6a6b6c",
+        "cssVar": "--hlx-ref-secondary-50",
+        "exposed": false,
+        "usage": "M3 reference tone 50. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-60",
+        "value": "#4a4b4d",
+        "cssVar": "--hlx-ref-secondary-60",
+        "exposed": false,
+        "usage": "M3 reference tone 60. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-70",
+        "value": "#2a2b2d",
+        "cssVar": "--hlx-ref-secondary-70",
+        "exposed": false,
+        "usage": "M3 reference tone 70. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-80",
+        "value": "#252628",
+        "cssVar": "--hlx-ref-secondary-80",
+        "exposed": false,
+        "usage": "M3 reference tone 80. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-90",
+        "value": "#252628",
+        "cssVar": "--hlx-ref-secondary-90",
+        "exposed": false,
+        "usage": "M3 reference tone 90. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-95",
+        "value": "#1f2022",
+        "cssVar": "--hlx-ref-secondary-95",
+        "exposed": false,
+        "usage": "M3 reference tone 95. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-98",
+        "value": "#1f2022",
+        "cssVar": "--hlx-ref-secondary-98",
+        "exposed": false,
+        "usage": "M3 reference tone 98. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-99",
+        "value": "#191a1c",
+        "cssVar": "--hlx-ref-secondary-99",
+        "exposed": false,
+        "usage": "M3 reference tone 99. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-secondary-100",
+        "value": "#0f1011",
+        "cssVar": "--hlx-ref-secondary-100",
+        "exposed": false,
+        "usage": "M3 reference tone 100. Inverse of primary; drives the invert theme and secondary button/chip variants. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-0",
+        "value": "#000",
+        "cssVar": "--hlx-ref-tertiary-0",
+        "exposed": false,
+        "usage": "M3 reference tone 0. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-10",
+        "value": "#22005d",
+        "cssVar": "--hlx-ref-tertiary-10",
+        "exposed": false,
+        "usage": "M3 reference tone 10. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-20",
+        "value": "#3a0092",
+        "cssVar": "--hlx-ref-tertiary-20",
+        "exposed": false,
+        "usage": "M3 reference tone 20. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-25",
+        "value": "#460da7",
+        "cssVar": "--hlx-ref-tertiary-25",
+        "exposed": false,
+        "usage": "M3 reference tone 25. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-30",
+        "value": "#5223b3",
+        "cssVar": "--hlx-ref-tertiary-30",
+        "exposed": false,
+        "usage": "M3 reference tone 30. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-35",
+        "value": "#5e33bf",
+        "cssVar": "--hlx-ref-tertiary-35",
+        "exposed": false,
+        "usage": "M3 reference tone 35. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-40",
+        "value": "#6a41cc",
+        "cssVar": "--hlx-ref-tertiary-40",
+        "exposed": false,
+        "usage": "M3 reference tone 40. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-50",
+        "value": "#845de7",
+        "cssVar": "--hlx-ref-tertiary-50",
+        "exposed": false,
+        "usage": "M3 reference tone 50. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-60",
+        "value": "#9e79ff",
+        "cssVar": "--hlx-ref-tertiary-60",
+        "exposed": false,
+        "usage": "M3 reference tone 60. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-70",
+        "value": "#b69bff",
+        "cssVar": "--hlx-ref-tertiary-70",
+        "exposed": false,
+        "usage": "M3 reference tone 70. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-80",
+        "value": "#cfbcff",
+        "cssVar": "--hlx-ref-tertiary-80",
+        "exposed": false,
+        "usage": "M3 reference tone 80. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-90",
+        "value": "#e9ddff",
+        "cssVar": "--hlx-ref-tertiary-90",
+        "exposed": false,
+        "usage": "M3 reference tone 90. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-95",
+        "value": "#e9ddff",
+        "cssVar": "--hlx-ref-tertiary-95",
+        "exposed": false,
+        "usage": "M3 reference tone 95. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-98",
+        "value": "#fdf7ff",
+        "cssVar": "--hlx-ref-tertiary-98",
+        "exposed": false,
+        "usage": "M3 reference tone 98. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-99",
+        "value": "#fffbff",
+        "cssVar": "--hlx-ref-tertiary-99",
+        "exposed": false,
+        "usage": "M3 reference tone 99. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-tertiary-100",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-tertiary-100",
+        "exposed": false,
+        "usage": "M3 reference tone 100. The purple ramp; drives the accent role. Key tones: 35/40 ≈ accent purple, 60 = brand purple. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-0",
+        "value": "#000",
+        "cssVar": "--hlx-ref-neutral-0",
+        "exposed": false,
+        "usage": "M3 reference tone 0. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-4",
+        "value": "#0d0d0d",
+        "cssVar": "--hlx-ref-neutral-4",
+        "exposed": false,
+        "usage": "M3 reference tone 4. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-6",
+        "value": "#171717",
+        "cssVar": "--hlx-ref-neutral-6",
+        "exposed": false,
+        "usage": "M3 reference tone 6. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-10",
+        "value": "#2a2b2d",
+        "cssVar": "--hlx-ref-neutral-10",
+        "exposed": false,
+        "usage": "M3 reference tone 10. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-12",
+        "value": "#262626",
+        "cssVar": "--hlx-ref-neutral-12",
+        "exposed": false,
+        "usage": "M3 reference tone 12. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-17",
+        "value": "#2e2e2e",
+        "cssVar": "--hlx-ref-neutral-17",
+        "exposed": false,
+        "usage": "M3 reference tone 17. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-20",
+        "value": "#363636",
+        "cssVar": "--hlx-ref-neutral-20",
+        "exposed": false,
+        "usage": "M3 reference tone 20. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-22",
+        "value": "#3b3b3b",
+        "cssVar": "--hlx-ref-neutral-22",
+        "exposed": false,
+        "usage": "M3 reference tone 22. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-24",
+        "value": "#404040",
+        "cssVar": "--hlx-ref-neutral-24",
+        "exposed": false,
+        "usage": "M3 reference tone 24. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-25",
+        "value": "#404040",
+        "cssVar": "--hlx-ref-neutral-25",
+        "exposed": false,
+        "usage": "M3 reference tone 25. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-30",
+        "value": "#4d4d4d",
+        "cssVar": "--hlx-ref-neutral-30",
+        "exposed": false,
+        "usage": "M3 reference tone 30. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-40",
+        "value": "#666",
+        "cssVar": "--hlx-ref-neutral-40",
+        "exposed": false,
+        "usage": "M3 reference tone 40. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-50",
+        "value": "#808080",
+        "cssVar": "--hlx-ref-neutral-50",
+        "exposed": false,
+        "usage": "M3 reference tone 50. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-60",
+        "value": "#999",
+        "cssVar": "--hlx-ref-neutral-60",
+        "exposed": false,
+        "usage": "M3 reference tone 60. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-70",
+        "value": "#b3b3b3",
+        "cssVar": "--hlx-ref-neutral-70",
+        "exposed": false,
+        "usage": "M3 reference tone 70. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-80",
+        "value": "#cfcfcf",
+        "cssVar": "--hlx-ref-neutral-80",
+        "exposed": false,
+        "usage": "M3 reference tone 80. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-87",
+        "value": "#dedede",
+        "cssVar": "--hlx-ref-neutral-87",
+        "exposed": false,
+        "usage": "M3 reference tone 87. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-90",
+        "value": "#e6e6e6",
+        "cssVar": "--hlx-ref-neutral-90",
+        "exposed": false,
+        "usage": "M3 reference tone 90. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-92",
+        "value": "#ebebeb",
+        "cssVar": "--hlx-ref-neutral-92",
+        "exposed": false,
+        "usage": "M3 reference tone 92. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-94",
+        "value": "#f0f0f0",
+        "cssVar": "--hlx-ref-neutral-94",
+        "exposed": false,
+        "usage": "M3 reference tone 94. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-95",
+        "value": "#f2f2f2",
+        "cssVar": "--hlx-ref-neutral-95",
+        "exposed": false,
+        "usage": "M3 reference tone 95. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-96",
+        "value": "#f5f5f5",
+        "cssVar": "--hlx-ref-neutral-96",
+        "exposed": false,
+        "usage": "M3 reference tone 96. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-98",
+        "value": "#fafafa",
+        "cssVar": "--hlx-ref-neutral-98",
+        "exposed": false,
+        "usage": "M3 reference tone 98. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-99",
+        "value": "#fcfcfc",
+        "cssVar": "--hlx-ref-neutral-99",
+        "exposed": false,
+        "usage": "M3 reference tone 99. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-100",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-neutral-100",
+        "exposed": false,
+        "usage": "M3 reference tone 100. Backgrounds and surfaces across light and dark Material themes. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-0",
+        "value": "#000",
+        "cssVar": "--hlx-ref-neutral-variant-0",
+        "exposed": false,
+        "usage": "M3 reference tone 0. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-10",
+        "value": "#222",
+        "cssVar": "--hlx-ref-neutral-variant-10",
+        "exposed": false,
+        "usage": "M3 reference tone 10. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-20",
+        "value": "#373737",
+        "cssVar": "--hlx-ref-neutral-variant-20",
+        "exposed": false,
+        "usage": "M3 reference tone 20. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-25",
+        "value": "#373737",
+        "cssVar": "--hlx-ref-neutral-variant-25",
+        "exposed": false,
+        "usage": "M3 reference tone 25. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-30",
+        "value": "#4f4f4f",
+        "cssVar": "--hlx-ref-neutral-variant-30",
+        "exposed": false,
+        "usage": "M3 reference tone 30. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-35",
+        "value": "#4f4f4f",
+        "cssVar": "--hlx-ref-neutral-variant-35",
+        "exposed": false,
+        "usage": "M3 reference tone 35. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-40",
+        "value": "#666",
+        "cssVar": "--hlx-ref-neutral-variant-40",
+        "exposed": false,
+        "usage": "M3 reference tone 40. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-50",
+        "value": "#7e7e7e",
+        "cssVar": "--hlx-ref-neutral-variant-50",
+        "exposed": false,
+        "usage": "M3 reference tone 50. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-60",
+        "value": "#999",
+        "cssVar": "--hlx-ref-neutral-variant-60",
+        "exposed": false,
+        "usage": "M3 reference tone 60. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-70",
+        "value": "#b4b4b4",
+        "cssVar": "--hlx-ref-neutral-variant-70",
+        "exposed": false,
+        "usage": "M3 reference tone 70. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-80",
+        "value": "#d0d0d0",
+        "cssVar": "--hlx-ref-neutral-variant-80",
+        "exposed": false,
+        "usage": "M3 reference tone 80. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-90",
+        "value": "#dfe1e2",
+        "cssVar": "--hlx-ref-neutral-variant-90",
+        "exposed": false,
+        "usage": "M3 reference tone 90. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-95",
+        "value": "#fafafa",
+        "cssVar": "--hlx-ref-neutral-variant-95",
+        "exposed": false,
+        "usage": "M3 reference tone 95. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-98",
+        "value": "#fcfcfc",
+        "cssVar": "--hlx-ref-neutral-variant-98",
+        "exposed": false,
+        "usage": "M3 reference tone 98. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-99",
+        "value": "#fcfcfc",
+        "cssVar": "--hlx-ref-neutral-variant-99",
+        "exposed": false,
+        "usage": "M3 reference tone 99. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-neutral-variant-100",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-neutral-variant-100",
+        "exposed": false,
+        "usage": "M3 reference tone 100. Outlines, dividers and surface variants. 90 = #dfe1e2, the footer/table hairline. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-0",
+        "value": "#000",
+        "cssVar": "--hlx-ref-error-0",
+        "exposed": false,
+        "usage": "M3 reference tone 0. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-10",
+        "value": "#410b0d",
+        "cssVar": "--hlx-ref-error-10",
+        "exposed": false,
+        "usage": "M3 reference tone 10. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-20",
+        "value": "#631618",
+        "cssVar": "--hlx-ref-error-20",
+        "exposed": false,
+        "usage": "M3 reference tone 20. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-25",
+        "value": "#631618",
+        "cssVar": "--hlx-ref-error-25",
+        "exposed": false,
+        "usage": "M3 reference tone 25. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-30",
+        "value": "#962428",
+        "cssVar": "--hlx-ref-error-30",
+        "exposed": false,
+        "usage": "M3 reference tone 30. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-35",
+        "value": "#962428",
+        "cssVar": "--hlx-ref-error-35",
+        "exposed": false,
+        "usage": "M3 reference tone 35. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-40",
+        "value": "#c43136",
+        "cssVar": "--hlx-ref-error-40",
+        "exposed": false,
+        "usage": "M3 reference tone 40. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-50",
+        "value": "#de3e43",
+        "cssVar": "--hlx-ref-error-50",
+        "exposed": false,
+        "usage": "M3 reference tone 50. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-60",
+        "value": "#e56367",
+        "cssVar": "--hlx-ref-error-60",
+        "exposed": false,
+        "usage": "M3 reference tone 60. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-70",
+        "value": "#ed8e91",
+        "cssVar": "--hlx-ref-error-70",
+        "exposed": false,
+        "usage": "M3 reference tone 70. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-80",
+        "value": "#f2c2c2",
+        "cssVar": "--hlx-ref-error-80",
+        "exposed": false,
+        "usage": "M3 reference tone 80. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-90",
+        "value": "#fadcdc",
+        "cssVar": "--hlx-ref-error-90",
+        "exposed": false,
+        "usage": "M3 reference tone 90. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-95",
+        "value": "#ffeded",
+        "cssVar": "--hlx-ref-error-95",
+        "exposed": false,
+        "usage": "M3 reference tone 95. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-98",
+        "value": "#fffafa",
+        "cssVar": "--hlx-ref-error-98",
+        "exposed": false,
+        "usage": "M3 reference tone 98. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-99",
+        "value": "#fffafa",
+        "cssVar": "--hlx-ref-error-99",
+        "exposed": false,
+        "usage": "M3 reference tone 99. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-error-100",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-error-100",
+        "exposed": false,
+        "usage": "M3 reference tone 100. Negative/error role. 40 ≈ the red-500 the semantic negative tokens use. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-0",
+        "value": "#000",
+        "cssVar": "--hlx-ref-success-0",
+        "exposed": false,
+        "usage": "M3 reference tone 0. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-10",
+        "value": "#003600",
+        "cssVar": "--hlx-ref-success-10",
+        "exposed": false,
+        "usage": "M3 reference tone 10. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-20",
+        "value": "#025b08",
+        "cssVar": "--hlx-ref-success-20",
+        "exposed": false,
+        "usage": "M3 reference tone 20. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-25",
+        "value": "#036e0c",
+        "cssVar": "--hlx-ref-success-25",
+        "exposed": false,
+        "usage": "M3 reference tone 25. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-30",
+        "value": "#04770e",
+        "cssVar": "--hlx-ref-success-30",
+        "exposed": false,
+        "usage": "M3 reference tone 30. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-35",
+        "value": "#047c0f",
+        "cssVar": "--hlx-ref-success-35",
+        "exposed": false,
+        "usage": "M3 reference tone 35. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-40",
+        "value": "#047e0f",
+        "cssVar": "--hlx-ref-success-40",
+        "exposed": false,
+        "usage": "M3 reference tone 40. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-50",
+        "value": "#04800f",
+        "cssVar": "--hlx-ref-success-50",
+        "exposed": false,
+        "usage": "M3 reference tone 50. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-60",
+        "value": "#6bbc73",
+        "cssVar": "--hlx-ref-success-60",
+        "exposed": false,
+        "usage": "M3 reference tone 60. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-70",
+        "value": "#9fdaa5",
+        "cssVar": "--hlx-ref-success-70",
+        "exposed": false,
+        "usage": "M3 reference tone 70. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-80",
+        "value": "#c6f0ca",
+        "cssVar": "--hlx-ref-success-80",
+        "exposed": false,
+        "usage": "M3 reference tone 80. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-90",
+        "value": "#d2f7d6",
+        "cssVar": "--hlx-ref-success-90",
+        "exposed": false,
+        "usage": "M3 reference tone 90. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-95",
+        "value": "#d6f8da",
+        "cssVar": "--hlx-ref-success-95",
+        "exposed": false,
+        "usage": "M3 reference tone 95. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-98",
+        "value": "#daf9dd",
+        "cssVar": "--hlx-ref-success-98",
+        "exposed": false,
+        "usage": "M3 reference tone 98. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-99",
+        "value": "#ddfae0",
+        "cssVar": "--hlx-ref-success-99",
+        "exposed": false,
+        "usage": "M3 reference tone 99. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      },
+      {
+        "name": "ref-success-100",
+        "value": "#fff",
+        "cssVar": "--hlx-ref-success-100",
+        "exposed": false,
+        "usage": "M3 reference tone 100. Positive role (success theme); only the primary ramp differs from the shared set. Generator input for the Angular Material theme, not for direct use — reach for the semantic tokens instead."
+      }
+    ],
+    "spacing": [
+      {
+        "name": "spacing-half",
+        "value": "4px",
+        "cssVar": "--hlx-spacing-half",
+        "exposed": true,
+        "usage": "Half step: tight gaps, button-toggle container padding."
+      },
+      {
+        "name": "spacing-1",
+        "value": "8px",
+        "cssVar": "--hlx-spacing-1",
+        "exposed": true,
+        "usage": "Base 8px unit: icon gaps, chip padding."
+      },
+      {
+        "name": "spacing-2",
+        "value": "16px",
+        "cssVar": "--hlx-spacing-2",
+        "exposed": true,
+        "usage": "Notification vertical padding; default component padding."
+      },
+      {
+        "name": "spacing-3",
+        "value": "24px",
+        "cssVar": "--hlx-spacing-3",
+        "exposed": true,
+        "usage": "Notification horizontal padding; footer gap and vertical padding."
+      },
+      {
+        "name": "spacing-4",
+        "value": "32px",
+        "cssVar": "--hlx-spacing-4",
+        "exposed": true,
+        "usage": "Header and footer horizontal padding."
+      },
+      {
+        "name": "spacing-5",
+        "value": "40px",
+        "cssVar": "--hlx-spacing-5",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-6",
+        "value": "48px",
+        "cssVar": "--hlx-spacing-6",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-7",
+        "value": "56px",
+        "cssVar": "--hlx-spacing-7",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-8",
+        "value": "64px",
+        "cssVar": "--hlx-spacing-8",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-9",
+        "value": "72px",
+        "cssVar": "--hlx-spacing-9",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-10",
+        "value": "80px",
+        "cssVar": "--hlx-spacing-10",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-11",
+        "value": "88px",
+        "cssVar": "--hlx-spacing-11",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-12",
+        "value": "96px",
+        "cssVar": "--hlx-spacing-12",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      },
+      {
+        "name": "spacing-13",
+        "value": "104px",
+        "cssVar": "--hlx-spacing-13",
+        "exposed": true,
+        "usage": "Layout step (8px grid) for section and page spacing."
+      }
+    ],
+    "radius": [
+      {
+        "name": "border-radius-default",
+        "value": "2px",
+        "cssVar": "--hlx-border-radius-default",
+        "exposed": true,
+        "usage": "Every Helix container: buttons, inputs, toggles, cards, dialogs, menus, tooltips, expansion panels."
+      },
+      {
+        "name": "chip-container-shape",
+        "value": "16px",
+        "cssVar": "--hlx-chip-container-shape",
+        "exposed": true,
+        "usage": "Chips (--mat-chip-container-shape-radius)."
+      },
+      {
+        "name": "fab-container-shape",
+        "value": "28px",
+        "cssVar": "--hlx-fab-container-shape",
+        "exposed": true,
+        "usage": "FABs and small FABs (--mat-fab-container-shape)."
+      },
+      {
+        "name": "notification-inline-radius",
+        "value": "2px",
+        "cssVar": "--hlx-notification-inline-radius",
+        "exposed": true,
+        "usage": "Inline notifications (hlx-notification--inline). Now border-radius-default (2px) to match Figma; was 6px before."
+      }
+    ],
+    "shadow": [
+      {
+        "name": "elevation-none",
+        "value": "0 0 0 1px rgb(42 43 45 / 8%)",
+        "cssVar": "--hlx-elevation-none",
+        "exposed": true,
+        "usage": ".hlx-elevation-none: flat surfaces that still need an edge."
+      },
+      {
+        "name": "elevation-sm",
+        "value": "0 0 1px rgb(0 0 0 / 12%), 0 1px 3px rgb(0 0 0 / 12%)",
+        "cssVar": "--hlx-elevation-sm",
+        "exposed": true,
+        "usage": ".hlx-elevation-sm: cards and resting panels."
+      },
+      {
+        "name": "elevation-md",
+        "value": "0 0 4px rgb(0 0 0 / 12%), 0 4px 6px rgb(0 0 0 / 12%)",
+        "cssVar": "--hlx-elevation-md",
+        "exposed": true,
+        "usage": ".hlx-elevation-md: menus, popovers, raised cards."
+      },
+      {
+        "name": "elevation-lg",
+        "value": "0 0 8px rgb(0 0 0 / 12%), 0 8px 12px rgb(0 0 0 / 12%)",
+        "cssVar": "--hlx-elevation-lg",
+        "exposed": true,
+        "usage": ".hlx-elevation-lg: dialogs and overlays."
+      }
+    ]
+  },
+  "counts": {
+    "color": 225,
+    "colorExposed": 35,
+    "spacing": 14,
+    "radius": 4,
+    "shadow": 4
+  },
+  "templates": [
+    "AiAssistant",
+    "AiChatHistory",
+    "AiEntryPoints",
+    "AiGenerateField",
+    "AiGenerationTrace",
+    "AiInlineActions",
+    "AiPromptStarters",
+    "AiSources",
+    "AiUsageLimits",
+    "AppShell",
+    "Charts",
+    "DataGrid",
+    "Dialog",
+    "EntityDetail",
+    "ErrorPages",
+    "Export",
+    "Filters",
+    "Forms",
+    "ListWithFilters",
+    "PageStates",
+    "Sidebar"
+  ],
+  "components": [
+    "AiAvatar",
+    "AiButton",
+    "Autocomplete",
+    "Badge",
+    "Breadcrumbs",
+    "Button",
+    "ButtonToggle",
+    "Card",
+    "Checkbox",
+    "Chip",
+    "DataGrid",
+    "DatePicker",
+    "Dialog",
+    "Divider",
+    "EmptyState",
+    "ExpansionPanel",
+    "Fab",
+    "Footer",
+    "FormField",
+    "Header",
+    "Highcharts",
+    "Hyperlink",
+    "Icon",
+    "IconButton",
+    "List",
+    "Menu",
+    "Notification",
+    "Paginator",
+    "ProgressBar",
+    "ProgressSpinner",
+    "RadioButton",
+    "RichTooltip",
+    "Select",
+    "Sidenav",
+    "SkeletonLoader",
+    "SlideToggle",
+    "Slider",
+    "Snackbar",
+    "SortHeader",
+    "Stepper",
+    "Table",
+    "Tabs",
+    "TextArea",
+    "TextInput",
+    "TimePicker",
+    "Toolbar",
+    "Tooltip",
+    "Tree"
+  ]
+}

@@ -1,0 +1,13 @@
+<div>
+  <cdx-header></cdx-header>
+  <hlx-card>
+    <button>Go</button>
+    <mat-button>M</mat-button>
+  </hlx-card>
+  @if (loading) {
+    <mat-spinner></mat-spinner>
+  } @else {
+    <input />
+    <app-thing></app-thing>
+  }
+</div>

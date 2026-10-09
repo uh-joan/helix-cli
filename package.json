@@ -1,0 +1,25 @@
+{
+  "name": "@hlx/cli",
+  "version": "0.0.0",
+  "description": "Helix CLI — measure, fix and verify Helix adoption in Angular apps.",
+  "type": "module",
+  "bin": {
+    "helix": "bin/helix.mjs"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@angular/compiler": "^22.2.2"
+  }
+}
