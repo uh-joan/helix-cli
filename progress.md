@@ -1,0 +1,34 @@
+# progress.md — helix-cli Phase 0
+
+Live state. On resumption, read [graph.md](graph.md) and this file first, then
+continue from **Next action**.
+
+## Graph
+- **Done:** N0 scaffold, N1 snapshot, N2 report, N3 doctor, N4 template scanner, N5 style scanner, N6 scan+baseline — all gates green (36/36 tests).
+- **Running:** none.
+- **Blocked:** N7 (consumer-app paths) — the only remaining node.
+- **Follow-ups (deferred by default, not blockers):** N5 wrap the real `@hlx/stylelint-config-helix`; N3 real token extraction for snapshot↔package reconciliation; N4 `--changed-since`.
+
+## Outputs
+- `graph.md`, `checks.md`, `progress.md` — current.
+- `@hlx/cli`: `bin/helix.mjs`, `src/cli.mjs`, `src/exit-codes.mjs`, `src/commands/{doctor,scan}.mjs`, `src/snapshot/{load.mjs,helix-snapshot.json}`, `src/report/{report,sarif}.mjs`, `src/scan/{template-scan,style-scan,baseline}.mjs`, `scripts/{build,build-snapshot}.mjs`.
+- Snapshot generated from `fixtures/artifact/tokens.json` (vendored); 225 colours (35 exposed), 21 templates, 48 components.
+- Tests: `test/{cli,exit-codes,snapshot,report,template-scan,style-scan,scan}.test.mjs` — 31 pass.
+- Dep added: `@angular/compiler` (real template parsing, N4).
+- `helix scan fixtures/apps/sample` works: coverage 67%, debt color 3 / mat 1 / ng-deep 1 / !important 2, legacy selectors 2.
+- Three `helix-baseline.json` — not created yet (N7).
+
+## Decisions
+- Graph scoped to Phase 0 (N0–N7): scaffold + `helix doctor` + `helix scan` + consumer baselines. Later phases extend this graph, not rewrite it.
+- Deterministic steps are code nodes (exit-code mapper, SARIF, baseline diff, coverage, snapshot loader).
+- Scope name `@hlx` (working); binary `helix`.
+- **N0 built zero-dependency** (Node ESM + `node:test`, no bundler/install): robust with no network, fits the private-registry concern. `npm run build` = syntax-check gate; swap in `tsc` later without changing the contract. doctor/scan are registered placeholders returning exit 2 until N3/N6.
+- Defaults taken (approved): snapshot = hand-built fixture from the artifact `tokens.json` (N1); lint presets = stubbed for now (N5). Only consumer-app paths still block N7.
+
+## Open issues
+- **Consumer-app locations** still unknown → the only hard blocker, and only for N7 (last node).
+- N5 uses a text scanner (approved default); wrap the real Stylelint preset later.
+- Snapshot is a hand-built fixture (approved default); wire the real artifact→snapshot export later.
+
+## Next action
+**N7 — consumer baselines** is all that remains for Phase 0. Needs the three consumer-app paths: run `helix scan <app> --baseline helix-baseline.json --update-baseline` in each, commit the baselines, confirm totals reproduce ~665/~690. Everything else (N0–N6) is green.
