@@ -75,7 +75,9 @@ export function scanScssString(snap, text, file = 'styles.scss') {
 
   const counts = {
     hardcodedColor,
-    materialInternalOverride: count(/\.mat-mdc-[\w-]+/g),
+    // Material internals you should not style: the Angular Material wrapper
+    // classes (.mat-mdc-*) and the underlying MDC classes (.mdc-*) they wrap.
+    materialInternalOverride: count(/\.(?:mat-mdc|mdc)-[\w-]+/g),
     ngDeep: count(/::ng-deep/g),
     important: count(/!important/g),
     nonSemanticToken,

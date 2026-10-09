@@ -20,6 +20,11 @@ test('counts debt categories with known fixture', () => {
   });
 });
 
+test('material overrides count both .mat-mdc-* and raw .mdc-*', () => {
+  const scss = '.mat-mdc-button { x: 1 } .mdc-chip { y: 2 } .foo { z: 3 }';
+  assert.equal(scanScssString(snap, scss, 'm.scss').counts.materialInternalOverride, 2);
+});
+
 test('a var() fallback hex is not counted as hard-coded', () => {
   const r = scanScssString(snap, 'a { color: var(--hlx-text-primary, #2a2b2d); }', 'f.scss');
   assert.equal(r.counts.hardcodedColor, 0);

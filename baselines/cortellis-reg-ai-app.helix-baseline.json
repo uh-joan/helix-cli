@@ -23,7 +23,7 @@
     "src/app/core/layout/workspace/table-viewer/table-viewer.scss": 36,
     "src/app/core/layout/workspace/workspace.scss": 2,
     "src/app/features/chat/pages/chat-conversation/assistant-card/assistant-card.scss": 5,
-    "src/app/features/chat/pages/chat-conversation/assistant-card/chat-actions/chat-actions.scss": 7,
+    "src/app/features/chat/pages/chat-conversation/assistant-card/chat-actions/chat-actions.scss": 8,
     "src/app/features/chat/pages/chat-conversation/assistant-card/download-card/download-card.scss": 5,
     "src/app/features/chat/pages/chat-conversation/assistant-card/embedded-references/download-spreadsheet/download-spreadsheet.scss": 2,
     "src/app/features/chat/pages/chat-conversation/assistant-card/embedded-references/embedded-reference.scss": 5,
@@ -42,7 +42,7 @@
     "src/app/features/chat/pages/chat-conversation/streaming-card/streaming-card.scss": 5,
     "src/app/features/chat/pages/chat-intro/chat-intro.scss": 7,
     "src/app/features/chat/pages/chat-intro/hint-card/hint-card.scss": 1,
-    "src/styles.scss": 19,
+    "src/styles.scss": 22,
     "src/app/core/notification/notification.ts": 2
   }
 }
