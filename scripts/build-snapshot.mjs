@@ -75,29 +75,47 @@ function parseTemplate(name, text) {
   return { slug: slug(displayName), displayName, status, summary, steps, raw: text.trim() };
 }
 
+function detectSelector(text, name) {
+  const m =
+    text.match(/<(hlx-[\w-]+)/) ||
+    text.match(/`<?(hlx-[\w-]+)>?`/) ||
+    text.match(/`\.(hlx-[\w-]+)`/) ||
+    text.match(/`(mat-[\w-]+)`/) ||
+    text.match(/`(mat[A-Z][\w]+)`/);
+  if (m) return m[1];
+  return 'hlx-' + name.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function parseComponent(name, text) {
+  const displayName = (text.match(/^#\s+(.+)$/m) || [])[1]?.trim() || name;
+  const summary = text.split('\n').map((l) => l.trim()).find((l) => l && !l.startsWith('#')) || '';
+  return { name, displayName, summary, selector: detectSelector(text, name), raw: text.trim() };
+}
+
 const compDir = new URL('project/components/', ART);
 const templateGuides = {};
 const templates = [];
+const componentGuides = {};
+const components = [];
 if (existsSync(compDir)) {
   for (const e of readdirSync(compDir, { withFileTypes: true })) {
-    if (!e.isDirectory() || !e.name.startsWith('Template')) continue;
+    if (!e.isDirectory()) continue;
     const readme = join(compDir.pathname, e.name, 'README.md');
     if (!existsSync(readme)) continue;
-    const g = parseTemplate(e.name, readFileSync(readme, 'utf8'));
-    templateGuides[g.slug] = g;
-    templates.push({ slug: g.slug, displayName: g.displayName, status: g.status, summary: g.summary });
+    const text = readFileSync(readme, 'utf8');
+    if (e.name.startsWith('Template')) {
+      const g = parseTemplate(e.name, text);
+      templateGuides[g.slug] = g;
+      templates.push({ slug: g.slug, displayName: g.displayName, status: g.status, summary: g.summary });
+    } else {
+      const c = parseComponent(e.name, text);
+      componentGuides[c.name] = c;
+      components.push({ name: c.name, selector: c.selector, summary: c.summary });
+    }
   }
 }
 templates.sort((a, b) => a.slug.localeCompare(b.slug));
-
-const COMPONENTS = [
-  'AiAvatar', 'AiButton', 'Autocomplete', 'Badge', 'Breadcrumbs', 'Button', 'ButtonToggle', 'Card', 'Checkbox',
-  'Chip', 'DataGrid', 'DatePicker', 'Dialog', 'Divider', 'EmptyState', 'ExpansionPanel', 'Fab', 'Footer',
-  'FormField', 'Header', 'Highcharts', 'Hyperlink', 'Icon', 'IconButton', 'List', 'Menu', 'Notification',
-  'Paginator', 'ProgressBar', 'ProgressSpinner', 'RadioButton', 'RichTooltip', 'Select', 'Sidenav',
-  'SkeletonLoader', 'SlideToggle', 'Slider', 'Snackbar', 'SortHeader', 'Stepper', 'Table', 'Tabs', 'TextArea',
-  'TextInput', 'TimePicker', 'Toolbar', 'Tooltip', 'Tree',
-];
+components.sort((a, b) => a.name.localeCompare(b.name));
 
 const snapshot = {
   schemaVersion: '1.1',
@@ -116,15 +134,17 @@ const snapshot = {
     radius: radius.length,
     shadow: shadow.length,
     templates: templates.length,
+    components: components.length,
   },
   templates,
   templateGuides,
-  components: COMPONENTS,
+  components,
+  componentGuides,
 };
 
 mkdirSync(new URL('../src/snapshot/', import.meta.url), { recursive: true });
 writeFileSync(OUT, JSON.stringify(snapshot, null, 2) + '\n');
 process.stdout.write(
   `snapshot: ${color.length} color (${snapshot.counts.colorExposed} exposed), ` +
-    `${templates.length} templates parsed, ${COMPONENTS.length} components\n`,
+    `${templates.length} templates, ${components.length} component guides\n`,
 );

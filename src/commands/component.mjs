@@ -1,10 +1,5 @@
 import { EXIT } from '../exit-codes.mjs';
-import { loadSnapshot, listComponents } from '../snapshot/load.mjs';
-
-// Phase 2: component names from the snapshot. Full per-component guideline
-// bodies (anatomy/variants/tokens/do-don't) are a follow-up — the composed
-// `helix template` guides already carry the usage rules for now.
-const toSelector = (name) => 'hlx-' + name.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+import { loadSnapshot, listComponents, getComponent } from '../snapshot/load.mjs';
 
 export default async function component(argv) {
   const snap = loadSnapshot();
@@ -13,7 +8,10 @@ export default async function component(argv) {
 
   if (!sub || sub === 'list') {
     process.stdout.write(`helix components (${names.length}):\n`);
-    for (const n of names) process.stdout.write(`  ${n}\n`);
+    for (const c of names) {
+      process.stdout.write(`  ${c.name}  (${c.selector})  —  ${(c.summary || '').slice(0, 72)}\n`);
+    }
+    process.stdout.write(`\nhelix component get <name|selector> [--json]\n`);
     return EXIT.OK;
   }
 
@@ -21,22 +19,20 @@ export default async function component(argv) {
     const q = rest.find((a) => !a.startsWith('-'));
     const json = rest.includes('--json');
     if (!q) {
-      process.stderr.write('helix component get <name>\n');
+      process.stderr.write('helix component get <name|selector>\n');
       return EXIT.USAGE;
     }
-    const match = names.find((n) => n.toLowerCase() === q.toLowerCase() || toSelector(n) === q.toLowerCase());
-    if (!match) {
-      const near = names.filter((n) => n.toLowerCase().includes(q.toLowerCase()));
-      process.stderr.write(`helix component: unknown '${q}'.` + (near.length ? ` Did you mean: ${near.join(', ')}?` : '') + '\n');
+    const comp = getComponent(snap, q);
+    if (!comp) {
+      const near = names.filter((c) => c.name.toLowerCase().includes(q.toLowerCase())).map((c) => c.name);
+      process.stderr.write(`helix component: unknown '${q}'.` + (near.length ? ` Did you mean: ${near.join(', ')}?` : ` Run 'helix component list'.`) + '\n');
       return EXIT.USAGE;
     }
-    const info = {
-      name: match,
-      selectorGuess: toSelector(match),
-      note: 'Phase 2: name + selector only. Usage rules live in the composed `helix template` guides; full component manifest (variants/tokens/do-don\'t) is a follow-up.',
-    };
-    if (json) process.stdout.write(JSON.stringify(info, null, 2) + '\n');
-    else process.stdout.write(`${info.name}  (${info.selectorGuess})\n${info.note}\n`);
+    if (json) {
+      process.stdout.write(JSON.stringify({ name: comp.name, displayName: comp.displayName, selector: comp.selector, summary: comp.summary, body: comp.raw }, null, 2) + '\n');
+    } else {
+      process.stdout.write(comp.raw + '\n');
+    }
     return EXIT.OK;
   }
 

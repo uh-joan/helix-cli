@@ -9,10 +9,11 @@ import verify from './commands/verify.mjs';
 import template from './commands/template.mjs';
 import rules from './commands/rules.mjs';
 import component from './commands/component.mjs';
+import agent from './commands/agent.mjs';
 
 const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url)));
 
-const COMMANDS = { doctor, scan, fix, verify, template, rules, component };
+const COMMANDS = { doctor, scan, fix, verify, template, rules, component, agent };
 
 const HELP = `helix v${pkg.version}
 
@@ -25,7 +26,8 @@ Commands:
   verify            The agent gate: scan changed files, fail on any new violation
   template list|get Serve Helix templates in phases (get <slug> --step overview|anatomy|rules|uses)
   rules <slug|file> Rules relevant to a template or a file
-  component list|get Component catalogue (name + selector)
+  component list|get Component catalogue (name + selector + guide)
+  agent setup       Write the managed Helix block to AGENTS.md / CLAUDE.md / Copilot (--client, --check)
 
 Options:
   -h, --help        Show this help
