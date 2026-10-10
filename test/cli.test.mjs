@@ -53,3 +53,15 @@ test('scan is dispatched (implemented in N6)', async () => {
   assert.equal(r.code, 0);
   assert.match(r.stdout, /coverage:/);
 });
+
+test('fix color is dispatched (dry-run)', async () => {
+  const r = await helix(['fix', 'color', 'fixtures/apps/sample']);
+  assert.equal(r.code, 0);
+  assert.match(r.stdout, /helix fix color/);
+});
+
+test('--help lists fix and verify', async () => {
+  const r = await helix(['--help']);
+  assert.match(r.stdout, /fix color/);
+  assert.match(r.stdout, /verify/);
+});

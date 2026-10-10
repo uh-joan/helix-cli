@@ -1,3 +1,6 @@
 node_modules/
 dist/
 .DS_Store
+
+# nightly run log (report .md files are kept)
+reports/nightly.log

@@ -4,18 +4,22 @@ import { readFileSync } from 'node:fs';
 import { EXIT } from './exit-codes.mjs';
 import doctor from './commands/doctor.mjs';
 import scan from './commands/scan.mjs';
+import fix from './commands/fix.mjs';
+import verify from './commands/verify.mjs';
 
 const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url)));
 
-const COMMANDS = { doctor, scan };
+const COMMANDS = { doctor, scan, fix, verify };
 
 const HELP = `helix v${pkg.version}
 
 Usage: helix <command> [options]
 
 Commands:
-  doctor            Environment + setup health; snapshot<->package reconciliation   (planned: node N3)
-  scan [path]       Adoption + debt metrics over templates, TS and SCSS             (planned: node N6)
+  doctor            Environment + setup health; snapshot<->package reconciliation
+  scan [path]       Adoption + debt metrics over templates, TS and SCSS
+  fix color [path]  Hard-coded colour -> nearest --hlx-* token (ΔE). Dry-run by default
+  verify            The agent gate: scan changed files, fail on any new violation
 
 Options:
   -h, --help        Show this help
