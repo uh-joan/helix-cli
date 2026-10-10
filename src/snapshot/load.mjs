@@ -36,6 +36,22 @@ export function isExposedToken(snap, name) {
   return Boolean(t && t.exposed);
 }
 
+export const TEMPLATE_STEPS = ['overview', 'anatomy', 'rules', 'uses'];
+
+export function listTemplates(snap) {
+  return snap.templates ?? [];
+}
+export function getTemplate(snap, slug) {
+  return (snap.templateGuides || {})[slug] || null;
+}
+export function templateStep(guide, step) {
+  if (step === 'all') return guide.raw;
+  return guide.steps?.[step] ?? null;
+}
+export function listComponents(snap) {
+  return snap.components ?? [];
+}
+
 // Classify an element tag/selector into one adoption bucket.
 export function classifySelector(snap, tag) {
   const t = String(tag).toLowerCase();
