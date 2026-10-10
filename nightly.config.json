@@ -1,0 +1,7 @@
+{
+  "apps": [
+    { "name": "off-x-ui", "path": "/Users/joan.saez-pons/code/off-x-ui" },
+    { "name": "cmc-gui-docker", "path": "/Users/joan.saez-pons/code/cmc-gui-docker" },
+    { "name": "cortellis-reg-ai-app", "path": "/Users/joan.saez-pons/code/cortellis-reg-ai-app" }
+  ]
+}
