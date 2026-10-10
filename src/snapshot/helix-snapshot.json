@@ -1833,7 +1833,8 @@
     "spacing": 14,
     "radius": 4,
     "shadow": 4,
-    "templates": 21
+    "templates": 21,
+    "components": 48
   },
   "templates": [
     {
@@ -2239,53 +2240,583 @@
     }
   },
   "components": [
-    "AiAvatar",
-    "AiButton",
-    "Autocomplete",
-    "Badge",
-    "Breadcrumbs",
-    "Button",
-    "ButtonToggle",
-    "Card",
-    "Checkbox",
-    "Chip",
-    "DataGrid",
-    "DatePicker",
-    "Dialog",
-    "Divider",
-    "EmptyState",
-    "ExpansionPanel",
-    "Fab",
-    "Footer",
-    "FormField",
-    "Header",
-    "Highcharts",
-    "Hyperlink",
-    "Icon",
-    "IconButton",
-    "List",
-    "Menu",
-    "Notification",
-    "Paginator",
-    "ProgressBar",
-    "ProgressSpinner",
-    "RadioButton",
-    "RichTooltip",
-    "Select",
-    "Sidenav",
-    "SkeletonLoader",
-    "SlideToggle",
-    "Slider",
-    "Snackbar",
-    "SortHeader",
-    "Stepper",
-    "Table",
-    "Tabs",
-    "TextArea",
-    "TextInput",
-    "TimePicker",
-    "Toolbar",
-    "Tooltip",
-    "Tree"
-  ]
+    {
+      "name": "AiAvatar",
+      "selector": "hlx-ai-avatar",
+      "summary": "A circular avatar marking AI-generated or AI-assisted content: the Helix AI gradient with three sparkles."
+    },
+    {
+      "name": "AiButton",
+      "selector": "hlx-btn-ai",
+      "summary": "A button for AI actions, filled with the Helix AI gradient."
+    },
+    {
+      "name": "Autocomplete",
+      "selector": "mat-autocomplete",
+      "summary": "A text input with a filtered suggestion panel: `matInput` + `mat-autocomplete` in a `mat-form-field`, styled by the Helix theme. Type to filter."
+    },
+    {
+      "name": "Badge",
+      "selector": "hlx-badge-primary",
+      "summary": "A small count or dot overlaid on another element to flag new or outstanding items."
+    },
+    {
+      "name": "Breadcrumbs",
+      "selector": "hlx-breadcrumbs",
+      "summary": "The trail of the current location. Built on `xng-breadcrumb`, which derives the trail from the Angular router (`data.breadcrumb` on each route). `<cdx-breadcrumb>` from `@cdx/theme-xng-breadcrumb` is the Helix wrapper (chevron separator, optional home icon)."
+    },
+    {
+      "name": "Button",
+      "selector": "hlx-btn-accent",
+      "summary": "Buttons trigger actions; in Helix the primary action is ink (`components-primary-filled`), not colour."
+    },
+    {
+      "name": "ButtonToggle",
+      "selector": "hlx-button-toggle-container",
+      "summary": "A segmented control for choosing one of a few options; it always has a value selected."
+    },
+    {
+      "name": "Card",
+      "selector": "mat-card",
+      "summary": "A surface for a single piece of content, `mat-card` styled by the Helix theme."
+    },
+    {
+      "name": "Checkbox",
+      "selector": "mat-checkbox",
+      "summary": "A `mat-checkbox` styled by the Helix theme — for multiple selection or toggling a setting."
+    },
+    {
+      "name": "Chip",
+      "selector": "hlx-neutral-chip",
+      "summary": "Chips are compact elements for an input, attribute, filter or status."
+    },
+    {
+      "name": "DataGrid",
+      "selector": "hlx-data-grid",
+      "summary": "Interactive grids for large data sets: AG Grid (`ag-grid-angular`) with the Helix AG Grid theme (`ag-theme-helix.css` from `@cdx/theme-ag-grid`)."
+    },
+    {
+      "name": "DatePicker",
+      "selector": "mat-datepicker",
+      "summary": "A `mat-datepicker` on a `matInput` in a `mat-form-field`. Users type a date or pick one from the calendar pop-up."
+    },
+    {
+      "name": "Dialog",
+      "selector": "hlx-dialog",
+      "summary": "A modal for a single task, opened with the `MatDialog` service and styled by the Helix theme."
+    },
+    {
+      "name": "Divider",
+      "selector": "hlx-divider-invert",
+      "summary": "A `mat-divider` line separating components, sections or content."
+    },
+    {
+      "name": "EmptyState",
+      "selector": "hlx-empty-state",
+      "summary": "The resting state for a region with no data, or a failed load the user can retry."
+    },
+    {
+      "name": "ExpansionPanel",
+      "selector": "mat-expansion-panel",
+      "summary": "An accordion of `mat-expansion-panel`s grouped in a `mat-accordion`, styled by the Helix theme."
+    },
+    {
+      "name": "Fab",
+      "selector": "hlx-btn-accent",
+      "summary": "A floating action button for the primary action on a screen."
+    },
+    {
+      "name": "Footer",
+      "selector": "hlx-footer-group",
+      "summary": "The product footer: copyright, legal links and any extra navigation."
+    },
+    {
+      "name": "FormField",
+      "selector": "hlx-input-small",
+      "summary": "`mat-form-field` wraps `matInput`, `textarea` and `mat-select` and adds the label, hint, error and prefix/suffix slots, styled by the Helix theme."
+    },
+    {
+      "name": "Header",
+      "selector": "hlx-header-product-name",
+      "summary": "The global product header: Clarivate mark, product name or logo, and global actions."
+    },
+    {
+      "name": "Highcharts",
+      "selector": "hlx-highcharts-styled-mode-theme",
+      "summary": "Charts via `highcharts-angular` with the Helix theme `HIGHCHARTS_HLX_THEME` from `@cdx/theme-highcharts`."
+    },
+    {
+      "name": "Hyperlink",
+      "selector": "hlx-link-blue",
+      "summary": "The Helix theme styles every `<a>`: links inherit the surrounding text colour and underline on hover."
+    },
+    {
+      "name": "Icon",
+      "selector": "mat-icon",
+      "summary": "Helix icons are Angular Material `mat-icon`s using **Google Material Symbols** (Outline style, fill 0), aligned to the Clarivate brand. See Foundations › Iconography."
+    },
+    {
+      "name": "IconButton",
+      "selector": "hlx-btn-accent",
+      "summary": "An icon-only button, `matIconButton` styled by the Helix theme — commonly an overflow or toolbar action."
+    },
+    {
+      "name": "List",
+      "selector": "mat-list",
+      "summary": "A vertical group of text, icons or other elements for easy scanning, `mat-list` styled by the Helix theme."
+    },
+    {
+      "name": "Menu",
+      "selector": "hlx-menu-scrollable",
+      "summary": "A panel of actions opened from a trigger, `mat-menu` styled by the Helix theme."
+    },
+    {
+      "name": "Notification",
+      "selector": "hlx-notification",
+      "summary": "Notifications tell the user about the application state where they may need to act."
+    },
+    {
+      "name": "Paginator",
+      "selector": "mat-paginator",
+      "summary": "Page controls for a data set, `mat-paginator` styled by the Helix theme."
+    },
+    {
+      "name": "ProgressBar",
+      "selector": "mat-progress-bar",
+      "summary": "A `mat-progress-bar` styled by the Helix theme."
+    },
+    {
+      "name": "ProgressSpinner",
+      "selector": "mat-progress-spinner",
+      "summary": "A `mat-progress-spinner` styled by the Helix theme. Helix mainly uses the **indeterminate** mode; for a known duration use a progress bar."
+    },
+    {
+      "name": "RadioButton",
+      "selector": "mat-radio-button",
+      "summary": "A `mat-radio-button` styled by the Helix theme, always in a `mat-radio-group` of two or more options where only one can be selected."
+    },
+    {
+      "name": "RichTooltip",
+      "selector": "hlx-rich-tooltip",
+      "summary": "A floating panel with structured content, shown on hover or click."
+    },
+    {
+      "name": "Select",
+      "selector": "mat-form-field",
+      "summary": "A dropdown choice in a `mat-form-field`, `mat-select` styled by the Helix theme."
+    },
+    {
+      "name": "Sidenav",
+      "selector": "mat-sidenav",
+      "summary": "A navigation drawer, `mat-sidenav` styled by the Helix theme."
+    },
+    {
+      "name": "SkeletonLoader",
+      "selector": "hlx-skeleton-loader",
+      "summary": "Placeholder shapes shown while content loads, built with `ngx-skeleton-loader`."
+    },
+    {
+      "name": "Slider",
+      "selector": "mat-slider",
+      "summary": "A `mat-slider` styled by the Helix theme."
+    },
+    {
+      "name": "SlideToggle",
+      "selector": "hlx-slide-toggle-small",
+      "summary": "An on/off switch for a single setting that takes effect immediately."
+    },
+    {
+      "name": "Snackbar",
+      "selector": "hlx-snackbar",
+      "summary": "A brief message at the edge of the screen, opened with the `MatSnackBar` service and styled by the Helix theme."
+    },
+    {
+      "name": "SortHeader",
+      "selector": "hlx-table",
+      "summary": "Sorting on a Helix table: `matSort` + `mat-sort-header` on `hlx-table`."
+    },
+    {
+      "name": "Stepper",
+      "selector": "mat-stepper",
+      "summary": "A multi-step flow, `mat-stepper` styled by the Helix theme."
+    },
+    {
+      "name": "Table",
+      "selector": "hlx-table",
+      "summary": "Data tables make information easy to scan for patterns."
+    },
+    {
+      "name": "Tabs",
+      "selector": "hlx-tab-invert",
+      "summary": "Tabs separate related content into views, one view per tab."
+    },
+    {
+      "name": "TextArea",
+      "selector": "hlx-input-small",
+      "summary": "A multi-line input: `<textarea matInput>` in a `mat-form-field`, styled by the Helix theme. Taller than a standard input; overflow wraps onto new lines."
+    },
+    {
+      "name": "TextInput",
+      "selector": "hlx-input-small",
+      "summary": "Text inputs let users enter and edit content in forms and dialogs."
+    },
+    {
+      "name": "TimePicker",
+      "selector": "mat-timepicker",
+      "summary": "A `mat-timepicker` on a `matInput` in a `mat-form-field`. Users type a time or pick one from a list."
+    },
+    {
+      "name": "Toolbar",
+      "selector": "mat-toolbar",
+      "summary": "A container for a title, navigation, icons or actions: `mat-toolbar` styled through Helix tokens."
+    },
+    {
+      "name": "Tooltip",
+      "selector": "matTooltip",
+      "summary": "A plain text tooltip (`matTooltip`) that briefly labels a UI element — commonly an icon-only button."
+    },
+    {
+      "name": "Tree",
+      "selector": "mat-tree",
+      "summary": "A hierarchical list, `mat-tree` (with a `childrenAccessor`) styled by the Helix theme."
+    }
+  ],
+  "componentGuides": {
+    "AiAvatar": {
+      "name": "AiAvatar",
+      "displayName": "AiAvatar",
+      "summary": "A circular avatar marking AI-generated or AI-assisted content: the Helix AI gradient with three sparkles.",
+      "selector": "hlx-ai-avatar",
+      "raw": "# AiAvatar\n\nA circular avatar marking AI-generated or AI-assisted content: the Helix AI gradient with three sparkles.\n\n`<hlx-ai-avatar>` from `@cdx/ngx-branding`.\n\n| Input | Type | Default | |\n|---|---|---|---|\n| `theme` | `gradient` \\| `dark` | `gradient` | Gradient fill, or a flat `surface-invert` disc |\n| `animated` | boolean | `false` | Rotates the gradient and pulses the sparkles (four 300ms keyframes); respects `prefers-reduced-motion` |\n| `label` | string | `AI` | `aria-label` (the host is `role=\"img\"`) |\n\n- 32px by default; size via `--hlx-ai-avatar-size`. Sparkles are `icon-invert`.\n- The gradient is the vertical AI gradient (`gradient-ai-start` → `gradient-ai-end`); see the brand book's AI gradient note.\n\nConsumer supplies: optional size and label. Use next to AI output, not as a user avatar.\n\nPreview: static HTML rendition; the animated variant runs a simplified turn of the Figma animation."
+    },
+    "AiButton": {
+      "name": "AiButton",
+      "displayName": "AiButton",
+      "summary": "A button for AI actions, filled with the Helix AI gradient.",
+      "selector": "hlx-btn-ai",
+      "raw": "# AiButton\n\nA button for AI actions, filled with the Helix AI gradient.\n\n`.hlx-btn-ai` applied to a `mat-button`, from `theme-helix-buttons`.\n\n- **Filled**: the AI gradient (`gradient-ai-start` → `gradient-ai-end`, 150deg) as the container; `text-invert` label; black hover 16% / focus 16% / pressed 24% state layers. Angular Material can't take a gradient fill, so the solid `gradient-ai-start` is the container colour and `.hlx-gradient-ai` paints the gradient over it.\n- **Outlined / text**: `text-primary` label, 4% black hover — the gradient is reserved for the filled, primary AI action.\n- `.hlx-gradient-ai` is the standalone class that paints the gradient (with a solid fallback for forced-colors mode) on any element.\n\nConsumer supplies: the label (and optional AI avatar/icon). One gradient AI action per context.\n\nPreview: live — the real Angular Material buttons with the shipped Helix theme, rendered from the AI stories in `button.stories.ts` and `fab.stories.ts` (packages/storybook). `.hlx-gradient-ai` on other surfaces is shown in Foundations › AI."
+    },
+    "Autocomplete": {
+      "name": "Autocomplete",
+      "displayName": "Autocomplete",
+      "summary": "A text input with a filtered suggestion panel: `matInput` + `mat-autocomplete` in a `mat-form-field`, styled by the Helix theme. Type to filter.",
+      "selector": "mat-autocomplete",
+      "raw": "# Autocomplete\n\nA text input with a filtered suggestion panel: `matInput` + `mat-autocomplete` in a `mat-form-field`, styled by the Helix theme. Type to filter.\n\nConsumer supplies: the control and the option list (filtered as the user types). The panel reuses the menu surface and tokens.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/autocomplete.stories.ts` (`Components/Autocomplete`). The top example is its **Grouped** story; the Playground below has that story file's controls."
+    },
+    "Badge": {
+      "name": "Badge",
+      "displayName": "Badge",
+      "summary": "A small count or dot overlaid on another element to flag new or outstanding items.",
+      "selector": "hlx-badge-primary",
+      "raw": "# Badge\n\nA small count or dot overlaid on another element to flag new or outstanding items.\n\n`matBadge` on a host element, themed by `mat.badge-color` in `overrides.scss`.\n\n- Default is the **tertiary** (accent purple, `icon-accent`) variant with `text-invert`.\n- `.hlx-badge-primary` uses the primary (ink) colour; `.hlx-badge-accent` is the purple default again.\n- Use a dot (no number) for a simple \"new\" marker, a count for a known number.\n\nConsumer supplies: the host element and the badge content (`matBadge=\"4\"`), position and size via the Material `matBadgePosition` / `matBadgeSize` inputs.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/badge.stories.ts` (`Components/Badge`). The top example is its **Matrix** story; the Playground below has that story file's controls."
+    },
+    "Breadcrumbs": {
+      "name": "Breadcrumbs",
+      "displayName": "Breadcrumbs",
+      "summary": "The trail of the current location. Built on `xng-breadcrumb`, which derives the trail from the Angular router (`data.breadcrumb` on each route). `<cdx-breadcrumb>` from `@cdx/theme-xng-breadcrumb` is the Helix wrapper (chevron separator, optional home icon).",
+      "selector": "hlx-breadcrumbs",
+      "raw": "# Breadcrumbs\n\nThe trail of the current location. Built on `xng-breadcrumb`, which derives the trail from the Angular router (`data.breadcrumb` on each route). `<cdx-breadcrumb>` from `@cdx/theme-xng-breadcrumb` is the Helix wrapper (chevron separator, optional home icon).\n\n- Separator: chevron (default), `>` or `/`.\n- Optional leading home icon; the current page is `text-primary`, weight 600, not a link.\n\nConsumer supplies: the route data; the component builds the trail. Keep labels short.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/breadcrumbs.stories.ts` (`Components/Breadcrumbs`). The top example is its **Shallow** story; the Playground below has that story file's controls."
+    },
+    "Button": {
+      "name": "Button",
+      "displayName": "Button",
+      "summary": "Buttons trigger actions; in Helix the primary action is ink (`components-primary-filled`), not colour.",
+      "selector": "hlx-btn-accent",
+      "raw": "# Button\n\nButtons trigger actions; in Helix the primary action is ink (`components-primary-filled`), not colour.\n\nAngular Material `mat-button` family (`matButton=\"filled\" | \"outlined\" | \"tonal\" | \"text\"`, plus `mat-fab`, `mat-mini-fab`, `mat-icon-button`) restyled by `theme-helix-buttons` in `overrides.scss`.\n\n- **Default**: filled = `components-primary-filled` + `text-invert`, hovering to `components-button-hover-background` (black). Outlined = 1px `components-primary-outline`, 4% black hover. Tonal = `components-secondary-filled`.\n- **`.hlx-btn-accent`**: purple-600 fill (`components-accent-filled`), 16% black hover layer; outlined/text in purple with a 4% purple layer. Use for at most one emphasised action per view.\n- **`.hlx-btn-negative`**: `components-negative-filled` (red-500) for destructive actions; outlined/text in `text-negative`.\n- **`.hlx-btn-invert`**: for buttons on `surface-invert` (white outline, white FAB with `icon-primary`).\n- **Size**: `.hlx-btn-large` (56px tall, 18px × 32px padding), default, `.hlx-btn-small` / `-xsmall` / `-xxsmall` (Material density −1/−2/−3).\n- Corners are `border-radius-default` (2px); FABs use `fab-container-shape` (28px).\n- Label in `label-large`, sentence case, a verb.\n- Size is also set by density (see Foundations › Density); heights come from Angular Material, the Helix classes set the step.\n\nConsumer supplies: the label (and optional `mat-icon`), the variant attribute and any `hlx-btn-*` class. Don't put two accent buttons side by side; don't use negative for anything reversible.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/button.stories.ts` (`Components/Button`). The top example is its **Matrix** story; the Playground below has that story file's controls.\n\nWhat the live theme shows that the static card hid:\n\n- `tonal` keeps Material's full pill shape (9999px), not `border-radius-default`, and for primary, negative and AI it renders the same near-black fill — only accent has its own tonal colour.\n- `elevated` on `invert` paints white text on a near-white container, so the label disappears."
+    },
+    "ButtonToggle": {
+      "name": "ButtonToggle",
+      "displayName": "ButtonToggle",
+      "summary": "A segmented control for choosing one of a few options; it always has a value selected.",
+      "selector": "hlx-button-toggle-container",
+      "raw": "# ButtonToggle\n\nA segmented control for choosing one of a few options; it always has a value selected.\n\n`mat-button-toggle-group` inside `.hlx-button-toggle-container`:\n\n- Container: 4px padding, 1px `color-neutral-400` border (hard-coded `#babcbe` in source), `border-radius-default`, `surface-minimal` ground.\n- Toggles are 30px tall, no dividers.\n- `.hlx-button-toggle-invert`: the selected option is white (`text-invert`) with `components-primary-filled` text — a raised segment on the grey track.\n\nConsumer supplies: the options and the bound value. Use for 2–4 short options; more belongs in a select.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/button-toggle.stories.ts` (`Components/Button toggle`). The top example is its **Themes** story; the Playground below has that story file's controls."
+    },
+    "Card": {
+      "name": "Card",
+      "displayName": "Card",
+      "summary": "A surface for a single piece of content, `mat-card` styled by the Helix theme.",
+      "selector": "mat-card",
+      "raw": "# Card\n\nA surface for a single piece of content, `mat-card` styled by the Helix theme.\n\n| `appearance` | |\n|---|---|\n| `raised` | `elevation-sm` shadow (default resting card) |\n| `outlined` | 1px `border-secondary`, no shadow |\n| `filled` | `surface-minimal` ground |\n\n- Corners `border-radius-default`; slots for title, subtitle, content, avatar, image, actions and footer.\n\nConsumer supplies: the content and appearance. Cards adapt to their content; keep one idea per card.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/card.stories.ts` (`Components/Card`). The top example is its **With Media** story; the Playground below has that story file's controls. The avatar and media images are inline placeholders in the story, so they render without network access."
+    },
+    "Checkbox": {
+      "name": "Checkbox",
+      "displayName": "Checkbox",
+      "summary": "A `mat-checkbox` styled by the Helix theme — for multiple selection or toggling a setting.",
+      "selector": "mat-checkbox",
+      "raw": "# Checkbox\n\nA `mat-checkbox` styled by the Helix theme — for multiple selection or toggling a setting.\n\n- States: checked, unchecked, indeterminate, disabled; `disabledInteractive` keeps a disabled box focusable (e.g. for a tooltip).\n- Label position after (default) or before; selected fill is `components-primary-filled` (ink).\n\nConsumer supplies: the label and bound value. Use radio buttons when only one option can be chosen.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/checkbox.stories.ts` (`Components/Checkbox`). The top example is its **States** story; the Playground below has that story file's controls."
+    },
+    "Chip": {
+      "name": "Chip",
+      "displayName": "Chip",
+      "summary": "Chips are compact elements for an input, attribute, filter or status.",
+      "selector": "hlx-neutral-chip",
+      "raw": "# Chip\n\nChips are compact elements for an input, attribute, filter or status.\n\n`mat-chip` / `mat-chip-option` / `mat-chip-row` with a Helix class from `theme-helix-chips`:\n\n| Class | Fill | Text / icon |\n|---|---|---|\n| `.hlx-neutral-chip` | `components-secondary-filled` | `text-primary` |\n| `.hlx-primary-chip` | `components-primary-filled` | `text-invert` |\n| `.hlx-accent-chip` | `components-accent-filled` | `text-invert` |\n| `.hlx-info-chip` | `components-info-filled` | `text-info` |\n| `.hlx-positive-chip` | `components-positive-filled` | `text-positive` |\n| `.hlx-warn-chip` | `components-warn-filled` | `text-warn` |\n| `.hlx-negative-chip` | `components-negative-filled-light` | `color-red-900` |\n| `.hlx-outlined-chip` | white, 1px `components-primary-outline` | `text-primary` |\n| `.hlx-basic-chip` | transparent (4% black hover) | `text-primary` |\n\n- Shape is `chip-container-shape` (16px), no outline on filled chips.\n- Sizes: default, `.hlx-chip-small`, `.hlx-chip-xsmall` (density −1/−2).\n- Status chips should carry an icon as well as colour.\n\nConsumer supplies: the label, an optional leading `mat-icon` and removal/selection handling.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/chip.stories.ts` (`Components/Chip`). The top example is its **Matrix** story; the Playground below has that story file's controls."
+    },
+    "DataGrid": {
+      "name": "DataGrid",
+      "displayName": "DataGrid",
+      "summary": "Interactive grids for large data sets: AG Grid (`ag-grid-angular`) with the Helix AG Grid theme (`ag-theme-helix.css` from `@cdx/theme-ag-grid`).",
+      "selector": "hlx-data-grid",
+      "raw": "# DataGrid\n\nInteractive grids for large data sets: AG Grid (`ag-grid-angular`) with the Helix AG Grid theme (`ag-theme-helix.css` from `@cdx/theme-ag-grid`).\n\n- Use for sorting, filtering, virtualised scrolling and large volumes. For simple static data, use the Table.\n\nConsumer supplies: the column defs and row data. The preview is a styled static table — the real grid is AG Grid, not Material.\n\nPreview: static HTML rendition of the source styles; sample content is illustrative."
+    },
+    "DatePicker": {
+      "name": "DatePicker",
+      "displayName": "DatePicker",
+      "summary": "A `mat-datepicker` on a `matInput` in a `mat-form-field`. Users type a date or pick one from the calendar pop-up.",
+      "selector": "mat-datepicker",
+      "raw": "# DatePicker\n\nA `mat-datepicker` on a `matInput` in a `mat-form-field`. Users type a date or pick one from the calendar pop-up.\n\n- The calendar container uses `surface-primary` and `border-radius-default`.\n- Requires a date adapter in the app (e.g. `provideNativeDateAdapter()`).\n\nConsumer supplies: the field, adapter and any min/max/filter. Range pickers use the start/end inputs.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/date-picker.stories.ts` (`Components/Date picker`). The top example is its **Date Range** story; the Playground below has that story file's controls."
+    },
+    "Dialog": {
+      "name": "Dialog",
+      "displayName": "Dialog",
+      "summary": "A modal for a single task, opened with the `MatDialog` service and styled by the Helix theme.",
+      "selector": "hlx-dialog",
+      "raw": "# Dialog\n\nA modal for a single task, opened with the `MatDialog` service and styled by the Helix theme.\n\n- **Acknowledge** — one action. **Confirm** — two actions (confirm + dismiss).\n- Confirm colour: `primary` (ink) or `negative` for destructive actions.\n- Options: close button, `disableClose`, actions alignment, width; corners `border-radius-default`, `elevation-lg`.\n\nConsumer supplies: the title, content and actions. Keep dialogs to one decision; put the primary action on the right.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/dialog.stories.ts` (`Components/Dialog`). It shows the **Playground** story with that story file's controls."
+    },
+    "Divider": {
+      "name": "Divider",
+      "displayName": "Divider",
+      "summary": "A `mat-divider` line separating components, sections or content.",
+      "selector": "hlx-divider-invert",
+      "raw": "# Divider\n\nA `mat-divider` line separating components, sections or content.\n\n- Orientation: horizontal (default) or vertical (`[vertical]=\"true\"`).\n- Inset variant indents the line to align with content.\n- On a dark (inverse) surface use the invert colour (`.hlx-divider-invert`, `border-invert`).\n\nConsumer supplies: placement and orientation. Keep dividers quiet — they use `border-secondary`.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/divider.stories.ts` (`Components/Divider`). The top example is its **Vertical** story; the Playground below has that story file's controls."
+    },
+    "EmptyState": {
+      "name": "EmptyState",
+      "displayName": "EmptyState",
+      "summary": "The resting state for a region with no data, or a failed load the user can retry.",
+      "selector": "hlx-empty-state",
+      "raw": "# EmptyState\n\nThe resting state for a region with no data, or a failed load the user can retry.\n\n`<hlx-empty-state>` from `@cdx/ngx-branding`.\n\n| Input | Type | Default | |\n|---|---|---|---|\n| `heading` | string | required | Short, specific heading (\"No alerts yet\") |\n| `message` | string | – | A sentence explaining the state and next step |\n| `tone` | `empty` \\| `error` | `empty` | `empty` for no data, `error` for a failed load |\n| `icon` | string | tone default | Material Symbol when no media is projected (`inbox` / `error_outline`) |\n\nSlots: `[hlx-empty-state-media]` (a pictogram, replacing the icon), default (extra copy), `[hlx-empty-state-actions]` (buttons).\n\n- Centred, `spacing-6`/`spacing-3` padding, 48px icon in `icon-secondary` (`icon-negative` for error).\n- `error` tone is announced as `role=\"alert\"`; `empty` is a quiet region.\n- Heading `headline-small`, message `body-medium` capped at 48ch.\n\nConsumer supplies: the heading, message, and any media/actions. Keep headings specific; give errors a retry.\n\nPreview: static HTML rendition of the source styles."
+    },
+    "ExpansionPanel": {
+      "name": "ExpansionPanel",
+      "displayName": "ExpansionPanel",
+      "summary": "An accordion of `mat-expansion-panel`s grouped in a `mat-accordion`, styled by the Helix theme.",
+      "selector": "mat-expansion-panel",
+      "raw": "# ExpansionPanel\n\nAn accordion of `mat-expansion-panel`s grouped in a `mat-accordion`, styled by the Helix theme.\n\n- Each header shows a toggle icon at its end for expanded/collapsed state.\n- Panels use `surface-primary`, `border-radius-default`, `elevation-sm`.\n\nConsumer supplies: the panel headers and content; set whether multiple can open at once.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/expansion-panel.stories.ts` (`Components/Expansion panel`). It shows the **Playground** story with that story file's controls."
+    },
+    "Fab": {
+      "name": "Fab",
+      "displayName": "Fab",
+      "summary": "A floating action button for the primary action on a screen.",
+      "selector": "hlx-btn-accent",
+      "raw": "# Fab\n\nA floating action button for the primary action on a screen.\n\n`mat-fab`, `mat-mini-fab` and extended FABs, themed by `theme-helix-buttons` in `overrides.scss`.\n\n- Shape is `fab-container-shape` (28px) for both default and small — rounded, not the 2px of normal buttons.\n- Default colour is the **secondary** variant (`components-secondary-filled`).\n- `.hlx-btn-accent` → purple-600 container, `text-invert`. `.hlx-btn-negative` → red container. `.hlx-btn-invert` → `surface-primary` container with `icon-primary`, for dark grounds.\n- Small FABs use the same 28px shape via `--mat-fab-small-container-shape`.\n\nConsumer supplies: the icon (and label, for extended), plus the variant class. One FAB per screen.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/fab.stories.ts` (`Components/FAB`). The top example is its **Matrix** story; the Playground below has that story file's controls."
+    },
+    "Footer": {
+      "name": "Footer",
+      "displayName": "Footer",
+      "summary": "The product footer: copyright, legal links and any extra navigation.",
+      "selector": "hlx-footer-group",
+      "raw": "# Footer\n\nThe product footer: copyright, legal links and any extra navigation.\n\n`<footer hlx-footer>` from `@cdx/ngx-branding`, with optional `<hlx-footer-group>` + `[hlxFooterGroupTitle]` columns and `a[cdxFooterLink]` links.\n\n| Input | Type | Default | |\n|---|---|---|---|\n| `branded` | boolean | `false` | Full Clarivate mark at left, copyright moves to the end |\n| `slim` | boolean | `false` | 8px padding |\n| `groupCompanyLinks` | boolean | `false` | Puts the legal links under a \"Company\" group |\n| `shouldShowTranslations` | boolean | `false` | Uses `FOOTER.*` translation keys |\n| `theme` | `ThemeOptionsBranding` | – | Overrides background and text colour |\n\n- Three layouts: **Row** (default), **Logo row** (`branded`, only when the logo isn't in the header) and **Column** (link groups). See Foundations › Branding.\n- Built-in links: Legal center, Privacy notice, Cookie policy, and Manage cookie preferences when OneTrust is ready.\n- `spacing-3` × `spacing-4` padding, `border-secondary` top rule, `text-secondary` text; links 14/24 regular, copyright 14/24 semibold, columns 120–160px wide.\n\nConsumer supplies: extra links or groups as content. Keep the legal links; don't restyle them.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/footer.stories.ts` (`Branding/Footer`): **Row**, **Logo row**, **Column** and **Slim**, then the Playground with that story file's controls."
+    },
+    "FormField": {
+      "name": "FormField",
+      "displayName": "FormField",
+      "summary": "`mat-form-field` wraps `matInput`, `textarea` and `mat-select` and adds the label, hint, error and prefix/suffix slots, styled by the Helix theme.",
+      "selector": "hlx-input-small",
+      "raw": "# FormField\n\n`mat-form-field` wraps `matInput`, `textarea` and `mat-select` and adds the label, hint, error and prefix/suffix slots, styled by the Helix theme.\n\n- Appearance: `fill` or `outline`; size with `hlx-input-small` / `hlx-input-x-small` (density −1 / −2).\n- `hlx-field-borderless` (outline appearance) hides the outline at rest and shows it on hover and focus — for an inline-edit title or a toolbar search where a boxed field is too heavy. It composes with density and the usual states; don't hand-roll field chrome with `::ng-deep`.\n- Errors replace the hint and turn the outline and label `text-negative`; keep the message to one line.\n- Prefix/suffix slots take a `mat-icon` or short text (units, currency).\n\nConsumer supplies: the control inside, its label, hint and error messages. See Text input, Text area and Select for the controls themselves.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/form-field.stories.ts` (`Components/Form field`). The examples are its **Matrix** and **Borderless** stories; the Playground below has that story file's controls."
+    },
+    "Header": {
+      "name": "Header",
+      "displayName": "Header",
+      "summary": "The global product header: Clarivate mark, product name or logo, and global actions.",
+      "selector": "hlx-header-product-name",
+      "raw": "# Header\n\nThe global product header: Clarivate mark, product name or logo, and global actions.\n\n`<header hlx-header>` from `@cdx/ngx-branding`, with `<hlx-header-product-name>` (or `a[hlx-header-product-name]`, `a|img[hlx-header-product-logo]`) and `<hlx-header-global>` for the right-hand actions.\n\n| Input | Type | Default | |\n|---|---|---|---|\n| `branded` | boolean | `true` | Shows the Clarivate mark (links to clarivate.com) |\n| `theme` | `ThemeOptionsBranding` | – | Overrides `header.background` and mark colour |\n| `openExternalLink` | boolean | `false` | Opens clarivate.com in a new tab |\n\n- 56px tall, `spacing-4` horizontal padding, `surface-invert` ground, white text, Source Sans 3. Controls inside use the dark Material theme.\n- Mark at 110×20 in white (`clarivate-logo-white.svg`), a 1×24px divider, then the product name at 18/24 bold. Without the mark the product name grows to 24/32.\n- Global actions sit at the right with 10px gaps; a divider appears automatically before `hlx-header-global`.\n- Three types: **Default** (logo, product name, navigation, global actions), **Condensed** (no app navigation; `condensed`, default on) and **No Clarivate logo** (`branded` off). See Foundations › Branding.\n\nConsumer supplies: the product name or logo, any nav (e.g. `.hlx-tab-invert` tabs) and global actions.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/header.stories.ts` (`Branding/Header`): **Default**, **Condensed**, **No Clarivate logo**, **Product name only** and **Logo only**, then the Playground with that story file's controls."
+    },
+    "Highcharts": {
+      "name": "Highcharts",
+      "displayName": "Highcharts",
+      "summary": "Charts via `highcharts-angular` with the Helix theme `HIGHCHARTS_HLX_THEME` from `@cdx/theme-highcharts`.",
+      "selector": "hlx-highcharts-styled-mode-theme",
+      "raw": "# Highcharts\n\nCharts via `highcharts-angular` with the Helix theme `HIGHCHARTS_HLX_THEME` from `@cdx/theme-highcharts`.\n\n- Render in **styled mode** and apply `hlx-highcharts-styled-mode-theme` so colour, type and axes come from the design system, not per-chart options.\n- The categorical series palette is `HLX_HIGHCHARTS_THEME_COLORS` (purple/teal/blue/red/violet/deep-teal…); never hardcode a colour array.\n- The theme pins `palette.colorScheme: 'light'`. Highcharts 13 otherwise follows the OS and turns charts dark in dark mode, where the theme's black legend becomes unreadable; Helix is light-only.\n- See the Charts template for the full pattern (accessibility, responsive container, right chart type).\n\nConsumer supplies: the chart `options` and data. Use for analytical charts.\n\nPreview: live — `<highcharts-chart>` with `HIGHCHARTS_HLX_THEME`, rendered from `packages/storybook/src/stories/highcharts.stories.ts` (`Components/Highcharts`). Its Playground switches type (line, spline, area, column, bar, pie), stacking, series count, data labels, legend, height and the Helix theme on/off. The Charts template shows one of each type."
+    },
+    "Hyperlink": {
+      "name": "Hyperlink",
+      "displayName": "Hyperlink",
+      "summary": "The Helix theme styles every `<a>`: links inherit the surrounding text colour and underline on hover.",
+      "selector": "hlx-link-blue",
+      "raw": "# Hyperlink\n\nThe Helix theme styles every `<a>`: links inherit the surrounding text colour and underline on hover.\n\n- `hlx-link-blue` — blue (`text-link`), going to `text-link-visited` once visited.\n- `hlx-link-visited` — forces the visited colour.\n- `hlx-link-inline` — for links inside running text: semibold and always underlined.\n- The `underline` attribute adds only the permanent underline.\n\nConsumer supplies: the link text and `href`. Link text says where it goes; never \"click here\".\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/hyperlink.stories.ts` (`Components/Hyperlink`). It shows the **Playground** story with that story file's controls."
+    },
+    "Icon": {
+      "name": "Icon",
+      "displayName": "Icon",
+      "summary": "Helix icons are Angular Material `mat-icon`s using **Google Material Symbols** (Outline style, fill 0), aligned to the Clarivate brand. See Foundations › Iconography.",
+      "selector": "mat-icon",
+      "raw": "# Icon\n\nHelix icons are Angular Material `mat-icon`s using **Google Material Symbols** (Outline style, fill 0), aligned to the Clarivate brand. See Foundations › Iconography.\n\n- Colour with an `hlx-icon-<color>` class on the icon or its container: **standard** (primary, secondary, disabled, invert), **semantic** (info, positive, warn, negative — each on its matching surface) and **distinct** (brand, accent).\n- Sizes: small 16, medium 20, large 24 (the `mat-icon` default), xlarge 32 px.\n\nConsumer supplies: the symbol name (ligature) and an `hlx-icon-*` class. Icons are functional — don't use them as decoration.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/icon.stories.ts` (`Components/Icon`). The top example is its **Colors** story; the Playground below has that story file's controls."
+    },
+    "IconButton": {
+      "name": "IconButton",
+      "displayName": "IconButton",
+      "summary": "An icon-only button, `matIconButton` styled by the Helix theme — commonly an overflow or toolbar action.",
+      "selector": "hlx-btn-accent",
+      "raw": "# IconButton\n\nAn icon-only button, `matIconButton` styled by the Helix theme — commonly an overflow or toolbar action.\n\n- Colour comes from `hlx-btn-*` classes on a parent: default (ink), `hlx-btn-accent`, `hlx-btn-negative`, `hlx-btn-invert`.\n- Size comes from **density** (0 to −3): it changes the hover target and state layer, not the icon size.\n- Round 40px target; the icon stays 24px.\n\nConsumer supplies: the icon, an `aria-label` (there's no visible label) and usually a `matTooltip`.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/icon-button.stories.ts` (`Components/Icon button`). The top example is its **Colors** story; the Playground below has that story file's controls."
+    },
+    "List": {
+      "name": "List",
+      "displayName": "List",
+      "summary": "A vertical group of text, icons or other elements for easy scanning, `mat-list` styled by the Helix theme.",
+      "selector": "mat-list",
+      "raw": "# List\n\nA vertical group of text, icons or other elements for easy scanning, `mat-list` styled by the Helix theme.\n\n- Types: static (`mat-list`), actions (`mat-action-list`), selectable (`mat-selection-list`, single or multiple).\n- Options: 1–3 lines, leading/trailing icons, dividers, a subheader, disabled items.\n\nConsumer supplies: the items and type. For tabular data use the Table or Data grid instead.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/list.stories.ts` (`Components/List`). The top example is its **Two Line** story; the Playground below has that story file's controls."
+    },
+    "Menu": {
+      "name": "Menu",
+      "displayName": "Menu",
+      "summary": "A panel of actions opened from a trigger, `mat-menu` styled by the Helix theme.",
+      "selector": "hlx-menu-scrollable",
+      "raw": "# Menu\n\nA panel of actions opened from a trigger, `mat-menu` styled by the Helix theme.\n\n- Trigger: a labelled button or an icon button (e.g. an overflow menu).\n- Items may have leading icons, dividers, disabled items and submenus.\n- Position: `xPosition` before/after, `yPosition` above/below, optional overlap and backdrop. Panel uses `surface-primary`, `elevation-md`.\n- `hlx-menu-scrollable` on the panel caps it at 320px and scrolls, for long menus.\n\nConsumer supplies: the trigger and `mat-menu-item`s.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/menu.stories.ts` (`Components/Menu`). It shows the **Playground** story with that story file's controls."
+    },
+    "Notification": {
+      "name": "Notification",
+      "displayName": "Notification",
+      "summary": "Notifications tell the user about the application state where they may need to act.",
+      "selector": "hlx-notification",
+      "raw": "# Notification\n\nNotifications tell the user about the application state where they may need to act.\n\n`<hlx-notification>` from `@cdx/ngx-branding`.\n\n| Input | Type | Default | |\n|---|---|---|---|\n| `title` | string | – | Optional title (`headline-small`) |\n| `presentation` | `inline` \\| `banner` | `inline` | Layout |\n| `severity` | `primary` \\| `warn` \\| `negative` \\| `positive` | `primary` | Colour theme. `info` and `success` are deprecated aliases of `primary` and `positive` |\n| `action` | string | – | Primary action button label |\n| `secondaryAction` | string | – | Secondary action button label |\n| `dismissable` | boolean | `false` | Adds Dismiss (banner) or a close icon (inline) |\n\nOutputs: `actionEvent`, `secondaryActionEvent`, `dismissEvent`. Content projection: `[icon]` and `[actions]`.\n\n- Severity theme map (surface / text / left border): **primary** = `surface-minimal` / `text-primary` / `border-primary`; **warn** = `surface-warn` / `text-warn` / `yellow-500`; **negative** = `surface-negative` / `red-900` / `red-500`; **positive** = `surface-positive` / `text-positive` / `green-600`.\n- Default icons: `info_outline` (primary), `warning` (warn), `error` (negative), `check_circle` (positive).\n- `negative` is announced as `role=\"alert\"`; the rest are `role=\"status\"`.\n- Corners `border-radius-default` (2px); inline has an 8px left rule.\n\nConsumer supplies: the message, severity, and handlers. Keep to one or two actions.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/notification.stories.ts` (`Branding/Notification`). The top example is its **All Severities** story; the Playground below has that story file's controls.\n\n> Renamed since the earlier sync: severities are now primary/warn/negative/positive (was info/success/warn); `info` and `success` still work as aliases."
+    },
+    "Paginator": {
+      "name": "Paginator",
+      "displayName": "Paginator",
+      "summary": "Page controls for a data set, `mat-paginator` styled by the Helix theme.",
+      "selector": "mat-paginator",
+      "raw": "# Paginator\n\nPage controls for a data set, `mat-paginator` styled by the Helix theme.\n\n- Needs `length` (total items) and `pageSize` (50 by default); optional page-size options and first/last buttons.\n- Background is transparent (`--mat-paginator-container-background-color`).\n\nConsumer supplies: the length, page size and page event handler.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/paginator.stories.ts` (`Components/Paginator`). It shows the **Playground** story with that story file's controls."
+    },
+    "ProgressBar": {
+      "name": "ProgressBar",
+      "displayName": "ProgressBar",
+      "summary": "A `mat-progress-bar` styled by the Helix theme.",
+      "selector": "mat-progress-bar",
+      "raw": "# ProgressBar\n\nA `mat-progress-bar` styled by the Helix theme.\n\n- **Determinate** — known progress, 0–100%. **Indeterminate** — ongoing activity.\n- Track is `surface-contrast`, fill `components-primary-filled`. The Material 2 `color` input has no effect under Helix.\n\nConsumer supplies: the mode and (determinate) value.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/progress-bar.stories.ts` (`Components/Progress bar`). The top example is its **All Modes** story; the Playground below has that story file's controls."
+    },
+    "ProgressSpinner": {
+      "name": "ProgressSpinner",
+      "displayName": "ProgressSpinner",
+      "summary": "A `mat-progress-spinner` styled by the Helix theme. Helix mainly uses the **indeterminate** mode; for a known duration use a progress bar.",
+      "selector": "mat-progress-spinner",
+      "raw": "# ProgressSpinner\n\nA `mat-progress-spinner` styled by the Helix theme. Helix mainly uses the **indeterminate** mode; for a known duration use a progress bar.\n\n- Ring track `surface-contrast`, indicator `components-primary-filled`. The Material 2 `color` input has no effect under Helix.\n\nConsumer supplies: the mode, diameter and (determinate) value.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/progress-spinner.stories.ts` (`Components/Progress spinner`). The top example is its **In Button** story; the Playground below has that story file's controls."
+    },
+    "RadioButton": {
+      "name": "RadioButton",
+      "displayName": "RadioButton",
+      "summary": "A `mat-radio-button` styled by the Helix theme, always in a `mat-radio-group` of two or more options where only one can be selected.",
+      "selector": "mat-radio-button",
+      "raw": "# RadioButton\n\nA `mat-radio-button` styled by the Helix theme, always in a `mat-radio-group` of two or more options where only one can be selected.\n\n- Layout: column or row; label position after/before; group/option disabled; required.\n- Selected dot is `components-primary-filled`.\n\nConsumer supplies: the group label and options. Keep option labels short.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/radio-button.stories.ts` (`Components/Radio button`). It shows the **Playground** story with that story file's controls."
+    },
+    "RichTooltip": {
+      "name": "RichTooltip",
+      "displayName": "RichTooltip",
+      "summary": "A floating panel with structured content, shown on hover or click.",
+      "selector": "hlx-rich-tooltip",
+      "raw": "# RichTooltip\n\nA floating panel with structured content, shown on hover or click.\n\n`[hlxTooltip]=\"templateRef\"` directive from `@cdx/ngx-branding`, rendering `<hlx-rich-tooltip>` in a CDK overlay.\n\n| Input | Type | Default | |\n|---|---|---|---|\n| `hlxTooltip` | `TemplateRef` | required | The content template |\n| `tooltipTrigger` | `hover` \\| `click` | `hover` | Click toggles and closes on outside click |\n\n- Panel: `surface-primary`, `text-primary`, `border-radius-default`, Material elevation 3; no padding of its own.\n- Positions below, above, left, right of the trigger, 8px away, pushed on-screen.\n- For a one-line label use plain `matTooltip` — Helix sets its container to `color-neutral-600`.\n\nConsumer supplies: the template, including its own padding and typography.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/rich-tooltip.stories.ts` (`Branding/Rich tooltip`). It shows the **Playground** story with that story file's controls."
+    },
+    "Select": {
+      "name": "Select",
+      "displayName": "Select",
+      "summary": "A dropdown choice in a `mat-form-field`, `mat-select` styled by the Helix theme.",
+      "selector": "mat-form-field",
+      "raw": "# Select\n\nA dropdown choice in a `mat-form-field`, `mat-select` styled by the Helix theme.\n\n- Appearance: `fill` or `outline`; density sets the height.\n- Options may be grouped (`mat-optgroup`), multiple, required, individually disabled; supports a leading icon, hint and error.\n\nConsumer supplies: the label and options. The open panel reuses the menu surface.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/select.stories.ts` (`Components/Select`). The top example is its **Matrix** story; the Playground below has that story file's controls."
+    },
+    "Sidenav": {
+      "name": "Sidenav",
+      "displayName": "Sidenav",
+      "summary": "A navigation drawer, `mat-sidenav` styled by the Helix theme.",
+      "selector": "mat-sidenav",
+      "raw": "# Sidenav\n\nA navigation drawer, `mat-sidenav` styled by the Helix theme.\n\n- **Standard** drawers use `mode=\"side\"` (pushes content); **modal** drawers use `over` or `push` with a backdrop.\n\nConsumer supplies: the drawer links and content. Use `side` on wide screens, `over` on narrow ones.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/sidenav.stories.ts` (`Components/Sidenav`). It shows the **Playground** story with that story file's controls."
+    },
+    "SkeletonLoader": {
+      "name": "SkeletonLoader",
+      "displayName": "SkeletonLoader",
+      "summary": "Placeholder shapes shown while content loads, built with `ngx-skeleton-loader`.",
+      "selector": "hlx-skeleton-loader",
+      "raw": "# SkeletonLoader\n\nPlaceholder shapes shown while content loads, built with `ngx-skeleton-loader`.\n\n- Configure the shape with `appearance`, the motion with `animation`, and the dimensions with `[theme]` (any CSS).\n- Uses `surface-minimal` for the placeholder fill.\n\nConsumer supplies: the shapes that mirror the real content's layout.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/skeleton-loader.stories.ts` (`Components/Skeleton loader`). The top example is its **Composition** story; the Playground below has that story file's controls."
+    },
+    "SlideToggle": {
+      "name": "SlideToggle",
+      "displayName": "SlideToggle",
+      "summary": "An on/off switch for a single setting that takes effect immediately.",
+      "selector": "hlx-slide-toggle-small",
+      "raw": "# SlideToggle\n\nAn on/off switch for a single setting that takes effect immediately.\n\n`mat-slide-toggle`, themed by the Helix overrides.\n\n- Track is `surface-contrast` when off, `components-primary-filled` (ink) when on; the thumb is `surface-primary`.\n- The off state shows a close (×) icon in the thumb; the on state shows a check — Helix masks these in via `.mdc-switch__icons`.\n- `.hlx-slide-toggle-small`: Material density −2, 28px track height.\n\nConsumer supplies: the label, bound value and change handler. Use for immediate settings; for a choice that needs confirmation, use a checkbox.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/slide-toggle.stories.ts` (`Components/Slide toggle`). The top example is its **States** story; the Playground below has that story file's controls."
+    },
+    "Slider": {
+      "name": "Slider",
+      "displayName": "Slider",
+      "summary": "A `mat-slider` styled by the Helix theme.",
+      "selector": "mat-slider",
+      "raw": "# Slider\n\nA `mat-slider` styled by the Helix theme.\n\n- **Basic** — one thumb (`matSliderThumb`). **Range** — two (`matSliderStartThumb` / `matSliderEndThumb`).\n- Options: `min`/`max`/`step`, `discrete` (value indicator while dragging), tick marks, disabled.\n- The active track and thumb use `components-primary-filled`.\n\nConsumer supplies: the bounds and bound value(s), plus an `aria-label`.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/slider.stories.ts` (`Components/Slider`). The top example is its **Range** story; the Playground below has that story file's controls."
+    },
+    "Snackbar": {
+      "name": "Snackbar",
+      "displayName": "Snackbar",
+      "summary": "A brief message at the edge of the screen, opened with the `MatSnackBar` service and styled by the Helix theme.",
+      "selector": "hlx-snackbar",
+      "raw": "# Snackbar\n\nA brief message at the edge of the screen, opened with the `MatSnackBar` service and styled by the Helix theme.\n\n- Dark `surface-invert` ground with `text-invert`; optional single action; auto-dismiss.\n\nConsumer supplies: the message, optional action and duration. One line; one action.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/snackbar.stories.ts` (`Components/Snackbar`). It shows the **Playground** story with that story file's controls."
+    },
+    "SortHeader": {
+      "name": "SortHeader",
+      "displayName": "SortHeader",
+      "summary": "Sorting on a Helix table: `matSort` + `mat-sort-header` on `hlx-table`.",
+      "selector": "hlx-table",
+      "raw": "# SortHeader\n\nSorting on a Helix table: `matSort` + `mat-sort-header` on `hlx-table`.\n\n- Each header toggles ascending → descending → unsorted; an arrow shows the active column and direction.\n\nConsumer supplies: the `matSort` directive and sortable column headers, wired to the data source.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/sort-header.stories.ts` (`Components/Sort header`). It shows the **Playground** story with that story file's controls."
+    },
+    "Stepper": {
+      "name": "Stepper",
+      "displayName": "Stepper",
+      "summary": "A multi-step flow, `mat-stepper` styled by the Helix theme.",
+      "selector": "mat-stepper",
+      "raw": "# Stepper\n\nA multi-step flow, `mat-stepper` styled by the Helix theme.\n\n- Move with Next/Back buttons or the step headers; horizontal or vertical.\n- The active step number uses `components-primary-filled`.\n\nConsumer supplies: the steps, their content and (optional) per-step validation.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/stepper.stories.ts` (`Components/Stepper`). It shows the **Playground** story with that story file's controls."
+    },
+    "Table": {
+      "name": "Table",
+      "displayName": "Table",
+      "summary": "Data tables make information easy to scan for patterns.",
+      "selector": "hlx-table",
+      "raw": "# Table\n\nData tables make information easy to scan for patterns.\n\n`table mat-table` with `.hlx-table`:\n\n- Header cells: `surface-minimal`, `body-small` at weight 600.\n- Body rows: white, `body-small`.\n- Row separators: `border-secondary`.\n- Cell and header height follow density (Foundations › Density). For large or interactive data use the Data grid.\n\nConsumer supplies: the data source, column definitions, and sort/pagination (`mat-sort-header`, `mat-paginator`). For large grids, CDX also ships an AG Grid theme (`theme-ag-grid`).\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/table.stories.ts` (`Components/Table`). It shows the **Playground** story with that story file's controls."
+    },
+    "Tabs": {
+      "name": "Tabs",
+      "displayName": "Tabs",
+      "summary": "Tabs separate related content into views, one view per tab.",
+      "selector": "hlx-tab-invert",
+      "raw": "# Tabs\n\nTabs separate related content into views, one view per tab.\n\n`mat-tab-group` / `mat-tab-nav-bar` with Helix overrides:\n\n- Labels use `label-large`.\n- Active indicator is 4px; with `fitInkBarToContent` it gets 2px top corners.\n- `.hlx-tab-compact` — a shorter 36px tab bar (default 48px) with a 2px indicator, for dense in-panel tabs, side panels and toolbars. Custom-property driven, so it composes with `hlx-tab-invert`.\n- `.hlx-tab-invert` puts the bar on `surface-invert` with `text-invert` labels and a white indicator — use it directly under the global header.\n\nConsumer supplies: tab labels and content (or router links for nav bars).\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/tabs.stories.ts` (`Components/Tabs`). The examples are its **With Icons** and **Compact** stories; the Playground below has that story file's controls.\n\nThe Storybook **Invert** story renders `hlx-tab-invert` on a white canvas, so its labels are invisible there; it needs a `surface-invert` wrapper (as the Button and Icon button stories use `.story-invert`)."
+    },
+    "TextArea": {
+      "name": "TextArea",
+      "displayName": "TextArea",
+      "summary": "A multi-line input: `<textarea matInput>` in a `mat-form-field`, styled by the Helix theme. Taller than a standard input; overflow wraps onto new lines.",
+      "selector": "hlx-input-small",
+      "raw": "# TextArea\n\nA multi-line input: `<textarea matInput>` in a `mat-form-field`, styled by the Helix theme. Taller than a standard input; overflow wraps onto new lines.\n\n- Shares the input's outline/filled styles, states and sizes (`hlx-input-small` / `-x-small`).\n\nConsumer supplies: the label, rows and any validation.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/text-area.stories.ts` (`Components/Text area`). It shows the **Playground** story with that story file's controls."
+    },
+    "TextInput": {
+      "name": "TextInput",
+      "displayName": "TextInput",
+      "summary": "Text inputs let users enter and edit content in forms and dialogs.",
+      "selector": "hlx-input-small",
+      "raw": "# TextInput\n\nText inputs let users enter and edit content in forms and dialogs.\n\n`mat-form-field` + `matInput`, themed by the Helix overrides. The same `mat-form-field` wraps `textarea` (Text area) and `mat-select` (Select) and adds the label, hint, error and prefix/suffix slots.\n\n- Outline: `components-text-input-outlined-enabled` → hover `components-text-input-outlined-hover` → focused `components-text-input-outlined-focused` → error `components-text-input-outlined-error`. Disabled fills `components-text-input-outlined-disabled`.\n- Filled appearance: `components-text-input-filled-fill`, hover `components-text-input-filled-hover-fill`, borders from the `components-text-input-filled-*` tokens.\n- Corners `border-radius-default` (2px) for both outline and filled.\n- Sizes: default (56px), `.hlx-input-small` (density −3), `.hlx-input-x-small` (density −4).\n- `.hlx-field-borderless` on an outline field shows the outline only on hover and focus (inline edit, toolbar search); see Form field.\n- Error text in `text-negative`; hint text in `text-secondary`.\n\nConsumer supplies: `mat-label`, the control, optional `mat-hint` / `mat-error`, and validation.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/input.stories.ts` (`Components/Input`). The top example is its **Matrix** story; the Playground below has that story file's controls."
+    },
+    "TimePicker": {
+      "name": "TimePicker",
+      "displayName": "TimePicker",
+      "summary": "A `mat-timepicker` on a `matInput` in a `mat-form-field`. Users type a time or pick one from a list.",
+      "selector": "mat-timepicker",
+      "raw": "# TimePicker\n\nA `mat-timepicker` on a `matInput` in a `mat-form-field`. Users type a time or pick one from a list.\n\n- Requires a date adapter (e.g. `provideNativeDateAdapter()`).\n\nConsumer supplies: the field and adapter; configure the interval and min/max.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/time-picker.stories.ts` (`Components/Time picker`). It shows the **Playground** story with that story file's controls."
+    },
+    "Toolbar": {
+      "name": "Toolbar",
+      "displayName": "Toolbar",
+      "summary": "A container for a title, navigation, icons or actions: `mat-toolbar` styled through Helix tokens.",
+      "selector": "mat-toolbar",
+      "raw": "# Toolbar\n\nA container for a title, navigation, icons or actions: `mat-toolbar` styled through Helix tokens.\n\n- Uses `surface-minimal` by default; the Material 2 `color` input isn't used.\n\nConsumer supplies: the content. For the product shell's top bar, use the branded Header instead.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/toolbar.stories.ts` (`Components/Toolbar`). The top example is its **With Menu And Icons** story; the Playground below has that story file's controls."
+    },
+    "Tooltip": {
+      "name": "Tooltip",
+      "displayName": "Tooltip",
+      "summary": "A plain text tooltip (`matTooltip`) that briefly labels a UI element — commonly an icon-only button.",
+      "selector": "matTooltip",
+      "raw": "# Tooltip\n\nA plain text tooltip (`matTooltip`) that briefly labels a UI element — commonly an icon-only button.\n\n- Container is `color-neutral-600` with `text-invert` (set by the Helix theme).\n- For a title, links or buttons, use the Rich tooltip instead.\n\nConsumer supplies: the text and the host element. Keep it to a few words.\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/tooltip.stories.ts` (`Components/Tooltip`). It shows the **Playground** story with that story file's controls."
+    },
+    "Tree": {
+      "name": "Tree",
+      "displayName": "Tree",
+      "summary": "A hierarchical list, `mat-tree` (with a `childrenAccessor`) styled by the Helix theme.",
+      "selector": "mat-tree",
+      "raw": "# Tree\n\nA hierarchical list, `mat-tree` (with a `childrenAccessor`) styled by the Helix theme.\n\n- With or without checkboxes; expand/collapse icons on parent nodes.\n\nConsumer supplies: the nested data and node template. Use for genuinely hierarchical data (taxonomies, file trees).\n\nPreview: live — the real Angular component with the shipped Helix theme, rendered from the Storybook stories in `packages/storybook/src/stories/tree.stories.ts` (`Components/Tree`). It shows the **Playground** story with that story file's controls."
+    }
+  }
 }

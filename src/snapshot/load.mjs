@@ -51,6 +51,13 @@ export function templateStep(guide, step) {
 export function listComponents(snap) {
   return snap.components ?? [];
 }
+export function getComponent(snap, q) {
+  const g = snap.componentGuides || {};
+  const lc = String(q).toLowerCase();
+  for (const k of Object.keys(g)) if (k.toLowerCase() === lc) return g[k];
+  for (const k of Object.keys(g)) if ((g[k].selector || '').toLowerCase() === lc) return g[k];
+  return null;
+}
 
 // Classify an element tag/selector into one adoption bucket.
 export function classifySelector(snap, tag) {

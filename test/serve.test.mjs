@@ -60,10 +60,14 @@ test('rules by file maps hints to templates', async () => {
   }
 });
 
-test('component list + get', async () => {
+test('component list + get serves the real body', async () => {
   const list = await helix(['component', 'list']);
   assert.match(list.stdout, /Button/);
   const get = await helix(['component', 'get', 'Button', '--json']);
   const o = JSON.parse(get.stdout);
-  assert.equal(o.selectorGuess, 'hlx-button');
+  assert.equal(o.name, 'Button');
+  assert.match(o.body, /mat-button/);
+  // lookup by selector also works (hlx-notification)
+  const bySel = await helix(['component', 'get', 'hlx-notification', '--json']);
+  assert.equal(JSON.parse(bySel.stdout).name, 'Notification');
 });
