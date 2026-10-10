@@ -1,0 +1,40 @@
+# Helix adoption gate — drop into a consumer app at .github/workflows/helix-scan.yml
+# Fails the PR only when a debt count goes UP vs the committed baseline
+# (helix-baseline.json). Generate the baseline once with:
+#   helix scan . --baseline helix-baseline.json --update-baseline
+name: Helix scan
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  security-events: write # for the SARIF upload step
+
+jobs:
+  helix-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Install the Helix CLI. Once @hlx/cli is published to the private
+      # registry, replace this with:  npm i -g @hlx/cli   (needs .npmrc + token)
+      - name: Install helix CLI
+        run: npm i -g github:uh-joan/helix-cli
+
+      # Ratchet gate: exit 4 on any regression vs the baseline -> the step fails.
+      - name: helix scan (fail on regression)
+        run: helix scan . --baseline helix-baseline.json --fail-on regression
+
+      # Optional: surface findings in the Security tab.
+      - name: helix scan (SARIF)
+        if: always()
+        run: helix scan . --format sarif > helix.sarif || true
+      - name: Upload SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: helix.sarif
