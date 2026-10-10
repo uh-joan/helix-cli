@@ -33,9 +33,13 @@ test('exposed color tokens resolve to usable values (no raw alias left)', () => 
   }
 });
 
-test('template catalog is present', () => {
-  assert.ok(snap.templates.includes('AiAssistant'));
-  assert.ok(snap.templates.includes('PageStates'));
+test('template catalog is present with parsed guides', () => {
+  const slugs = snap.templates.map((t) => t.slug);
+  assert.ok(slugs.includes('ai-assistant'));
+  assert.ok(slugs.includes('page-states'));
+  const g = snap.templateGuides['ai-assistant'];
+  assert.match(g.steps.overview, /AI assistant/);
+  assert.match(g.steps.rules, /aria-live/);
 });
 
 test('selector classification', () => {

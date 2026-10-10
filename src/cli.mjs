@@ -6,10 +6,13 @@ import doctor from './commands/doctor.mjs';
 import scan from './commands/scan.mjs';
 import fix from './commands/fix.mjs';
 import verify from './commands/verify.mjs';
+import template from './commands/template.mjs';
+import rules from './commands/rules.mjs';
+import component from './commands/component.mjs';
 
 const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url)));
 
-const COMMANDS = { doctor, scan, fix, verify };
+const COMMANDS = { doctor, scan, fix, verify, template, rules, component };
 
 const HELP = `helix v${pkg.version}
 
@@ -20,6 +23,9 @@ Commands:
   scan [path]       Adoption + debt metrics over templates, TS and SCSS
   fix color [path]  Hard-coded colour -> nearest --hlx-* token (ΔE). Dry-run by default
   verify            The agent gate: scan changed files, fail on any new violation
+  template list|get Serve Helix templates in phases (get <slug> --step overview|anatomy|rules|uses)
+  rules <slug|file> Rules relevant to a template or a file
+  component list|get Component catalogue (name + selector)
 
 Options:
   -h, --help        Show this help
